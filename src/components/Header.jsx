@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="w-full absolute flex justify-between px-20 py-10 bg-gradient-to-b from-green-500  text-white">
+      <div className="w-full absolute flex justify-between px-20 py-10 bg-gradient-to-b from-black  text-white z-50">
         <div className="">Travel Site</div>
         <div>
           <Link className="mx-4" to="/">

@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 body {
-  overflow-x: hidden; /* Hide scrollbars */
+  /* Hide scrollbars */
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
