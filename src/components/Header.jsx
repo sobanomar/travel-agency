@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <>
       <div className="w-full absolute flex justify-between px-20 py-10 bg-gradient-to-b from-black  text-white z-50">
-        <div className="">Travel Site</div>
+        <div className="text-xl">
+          <h1>VISITING MY FRIEND TRAVELS</h1>
+        </div>
         <div>
           <Link className="mx-4" to="/">
             Home
