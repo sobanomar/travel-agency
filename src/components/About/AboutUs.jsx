@@ -28,7 +28,7 @@ const AboutUs = () => {
           />
         </div>
       </div>
-      <div className="w-[50%] flex flex-col justify-between">
+      <div className="w-[55%] flex flex-col justify-between">
         <div className="flex flex-col gap-5">
           <p className="text-purple-700 font-semibold">About us</p>
           <h1 className="text-5xl w-[80%]">
