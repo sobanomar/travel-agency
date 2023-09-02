@@ -19,7 +19,7 @@ const Header = () => {
             Destination
           </Link>
           <Link className="mx-4" to="/about">
-            Page
+            Our Gallery
           </Link>
           <Link className="mx-4" to="/about">
             Contact Us

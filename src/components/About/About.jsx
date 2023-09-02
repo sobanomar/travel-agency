@@ -1,16 +1,22 @@
 import React from "react";
-import Hero from "./Hero";
-import VisionMission from "./VisionMission";
-import Welcome from "./Welcome";
-import BestPackage from "./BestPackage";
+import AboutHero from "./AboutHero";
+import AboutWelcome from "./AboutWelcome";
+import AboutBestPackage from "./AboutBestPackage";
+import AboutVisionMission from "./AboutVisionMission";
+import AboutUs from "./AboutUs";
+import SuccessStory from "./SuccessStory";
+import TestimonialAbout from "./TestimonialAbout";
 
 const About = () => {
   return (
     <>
-      <Hero />
-      <VisionMission />
-      <Welcome />
-      <BestPackage />
+      <AboutHero />
+      <AboutUs />
+      <AboutVisionMission />
+      <AboutWelcome />
+      <AboutBestPackage />
+      <SuccessStory />
+      <TestimonialAbout />
     </>
   );
 };

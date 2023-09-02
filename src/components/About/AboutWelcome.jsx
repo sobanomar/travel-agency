@@ -2,15 +2,15 @@ import React from "react";
 import welcomeImage from "../../assets/welcome-image.jpg";
 import welcomeArrow from "../../assets/welcome-arrow.png";
 
-const Welcome = () => {
+const AboutWelcome = () => {
   return (
     <>
-      <div className="my-40 mx-20 relative">
+      <div className="mt-52 mb-40 mx-20 relative">
         <div className="absolute left-[40rem] top-1">
           <img src={welcomeArrow} alt="" className="w-64" />
         </div>
         <div className="w-96 ml-80">
-          <h3 className="text-green-500">Welcome</h3>
+          <h3 className="text-purple-500 font-semibold">Welcome</h3>
           <h1 className="text-5xl">
             Hello Traveller Welcome To Our Travel Agency
           </h1>
@@ -19,7 +19,7 @@ const Welcome = () => {
           <div className="w-[30rem] -rotate-6 ">
             <img
               src={welcomeImage}
-              className="w-[25rem] h-[33rem] object-cover rounded-2xl"
+              className="w-[25rem] h-[33rem] object-cover rounded-2xl shadow-[0px_0px_30px_0px] shadow-purple-600"
               alt="img here"
             />
           </div>
@@ -41,7 +41,7 @@ const Welcome = () => {
               adipisci provident maxime dolores! Velit excepturi quo rem qui
               iure?
             </p>
-            <h1 className="font-semibold text-xl my-4 text-green-500">
+            <h1 className="font-semibold text-xl my-4  text-purple-500">
               Founder Name
             </h1>
           </div>
@@ -51,4 +51,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default AboutWelcome;

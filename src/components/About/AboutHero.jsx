@@ -3,7 +3,7 @@ import map1 from "../../assets/aboutus-map-1.png";
 import map2 from "../../assets/aboutus-map-2.png";
 import bg from "../../assets/bg-about.jpg";
 
-const Hero = () => {
+const AboutHero = () => {
   return (
     <div className="w-full   h-[44.3rem] overflow-hidden  ">
       <div className="absolute left-[30rem] top-72 w-[36rem]  ">
@@ -24,4 +24,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default AboutHero;

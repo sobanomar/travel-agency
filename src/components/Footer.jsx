@@ -10,7 +10,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-green-600 h-96 ">
+    <div className="w-full bg-purple-600 h-96 ">
       <img className="absolute w-[70rem] " src={footerMap} alt="" />
       <div className="text-white mx-20">
         <div className="py-11">
@@ -75,7 +75,7 @@ const Footer = () => {
                   Commodi, saepe!
                 </p>
               </div>
-              <button className="text-white bg-green-800 py-2 px-10 mt-10 rounded-full ">
+              <button className="text-white bg-purple-800 py-2 px-10 mt-10 rounded-full ">
                 Booking Now
               </button>
             </div>

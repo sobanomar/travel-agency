@@ -5,12 +5,12 @@ import mapLeft from "../../assets/vision-map-left.png";
 import arrowUpper from "../../assets/arrow-Upper.png";
 import arrowLower from "../../assets/arrow-lower.png";
 
-const VisionMission = () => {
+const AboutVisionMission = () => {
   return (
     <div className="">
       <div className="flex mx-20 my-32 justify-around">
         <div className="w-[35rem]">
-          <h3 className="text-green-500">Vision</h3>
+          <h3 className="text-purple-500 font-semibold">Vision</h3>
           <h1 className="text-5xl my-4 mx-2">Our Vision</h1>
           <div className="p-4">
             <p className="p-2">
@@ -28,7 +28,7 @@ const VisionMission = () => {
           </div>
         </div>
         <div className="w-[35rem] mt-40">
-          <h3 className="text-green-500">Mission</h3>
+          <h3 className="text-purple-500 font-semibold">Mission</h3>
           <h1 className="text-5xl my-4 mx-2">Our Mission</h1>
           <div className="p-2">
             <p className="p-2">
@@ -68,4 +68,4 @@ const VisionMission = () => {
   );
 };
 
-export default VisionMission;
+export default AboutVisionMission;

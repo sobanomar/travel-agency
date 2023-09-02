@@ -3,7 +3,7 @@ import bestPackage from "../../assets/best-package.jpg";
 import mapLeft from "../../assets/best-package-left.png";
 import mapRight from "../../assets/best-package-right.png";
 
-const BestPackage = () => {
+const AboutBestPackage = () => {
   return (
     <div className="my-20 relative ">
       <div>
@@ -22,7 +22,7 @@ const BestPackage = () => {
             praesentium, veniam soluta eligendi atque sit laudantium ipsam?
             Porro, nihil perferendis?
           </p>
-          <button className="text-white bg-green-600 py-2 px-10 mt-10 rounded-full w-44">
+          <button className="text-white bg-purple-600 py-2 px-10 mt-10 rounded-full w-44">
             Get Now
           </button>
         </div>
@@ -38,4 +38,4 @@ const BestPackage = () => {
   );
 };
 
-export default BestPackage;
+export default AboutBestPackage;
