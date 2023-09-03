@@ -1,3 +1,4 @@
+import whyChooseUsBackground from "../../assets/why-choose-us-bg.jpg";
 import whyGlobe from "../../assets/home-why-globe.png";
 import whyPlane from "../../assets/home-why-plane.png";
 import whyList from "../../assets/home-why-list.png";
@@ -7,7 +8,8 @@ const HomeWhyChooseUs = () => {
   return (
     // why choose us section?
     <>
-      <div className="bg-purple-900 text-white flex flex-col">
+      <div className=" text-white flex flex-col my-40 relative">
+        <img className="absolute -z-10" src={whyChooseUsBackground} />
         <div className="flex justify-between mx-20 my-20">
           <div className="flex flex-col items-center">
             <img src={whyGlobe} />
@@ -34,7 +36,7 @@ const HomeWhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="flex justify-center relative">
+        <div className="flex justify-center opacity-0">
           <div
             className=" text-black rounded-full bg-white flex flex-col items-center "
             style={{ height: "400px", width: "400px" }}
@@ -44,26 +46,6 @@ const HomeWhyChooseUs = () => {
               Why <br /> choose us?
             </h1>
           </div>
-          <div
-            className=" rounded-full border-2 absolute border-white top-96 opacity-80 z-0"
-            style={{ height: "550px", width: "550px" }}
-          ></div>
-          <div
-            className=" rounded-full border-2 absolute border-white top-72 opacity-60 z-0"
-            style={{ height: "750px", width: "750px" }}
-          ></div>
-          <div
-            className=" rounded-full border-2 absolute border-white top-40 opacity-40 z-0"
-            style={{ height: "1000px", width: "1000px" }}
-          ></div>
-          <div
-            className=" rounded-full border-2 absolute border-white top-10 opacity-25 z-0"
-            style={{ height: "1250px", width: "1250px" }}
-          ></div>
-          <div
-            className=" rounded-full border-2 absolute border-white top-1 -translate-y-20 opacity-10 z-0 overflow-hidden"
-            style={{ height: "1500px", width: "1500px" }}
-          ></div>
         </div>
 
         <div className="flex justify-between mx-20 my-20">

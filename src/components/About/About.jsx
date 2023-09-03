@@ -4,8 +4,8 @@ import AboutBestPackage from "./AboutBestPackage";
 import AboutVisionMission from "./AboutVisionMission";
 import AboutUs from "./AboutUs";
 import SuccessStory from "./SuccessStory";
-import TestimonialAbout from "./TestimonialAbout";
 import Hero from "../Common/Hero";
+import Testimonial from "../Common/Testimonial";
 
 const About = () => {
   let textHero =
@@ -18,7 +18,7 @@ const About = () => {
       <AboutWelcome />
       <AboutBestPackage />
       <SuccessStory />
-      <TestimonialAbout />
+      <Testimonial />
     </>
   );
 };

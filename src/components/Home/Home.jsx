@@ -5,6 +5,7 @@ import HomeWhyChooseUs from "./HomeWhyChooseUs";
 import HomePopularDestinations from "./HomePopularDestinations";
 import HomePackage from "./HomePackage";
 import HomeGallery from "./HomeGallery";
+import Testimonial from "../Common/Testimonial";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <HomePopularDestinations />
       <HomePackage />
       <HomeGallery />
+      <Testimonial />
     </>
   );
 };

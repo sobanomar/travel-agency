@@ -10,40 +10,40 @@ const HomeGallery = () => {
         {/* image section */}
         <div className="flex flex-col w-[100%] h-[100%] ">
           <div className="flex flex-col w-[100%]">
-            <div className="flex gap-5 mt-20 w-full h-full justify-between">
+            <div className="flex gap-10 mt-20 w-full h-full">
               {/* first two image */}
               <div className="w-[100%]   ">
                 <img
                   src={pic1}
-                  className="rounded-3xl w-[100%] h-[80%] object-cover "
+                  className="rounded-3xl w-[100%] h-[80%] object-cover img-glow"
                 />
               </div>
               <div className="w-[100%] ">
                 <img
                   src={pic2}
-                  className="rounded-3xl w-[100%] h-[80%] object-cover "
+                  className="rounded-3xl w-[100%] h-[80%] object-cover img-glow"
                 />
               </div>
             </div>
-            <div className="flex gap-5 -mt-20 w-full h-full justify-between">
+            <div className="flex gap-10 -mt-20 w-full h-full">
               {/* first two image */}
               <div className="w-[100%]   ">
                 <img
                   src={pic2}
-                  className="rounded-3xl w-[100%] h-[80%] object-cover "
+                  className="rounded-3xl w-[100%] h-[80%] object-cover img-glow"
                 />
               </div>
               <div className="w-[100%] ">
                 <img
                   src={pic1}
-                  className="rounded-3xl w-[100%] h-[80%] object-cover "
+                  className="rounded-3xl w-[100%] h-[80%] object-cover img-glow"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-96 w-[50%] ">
-          <h1 className="text-lg">Gallery</h1>
+        <div className="flex flex-col justify-center w-[50%] ">
+          <h1 className="text-lg text-purple-600 font-semibold">Gallery</h1>
           <h1 className="text-5xl leading-[56px] mt-7">
             Moments Captured By Connoisseurs Of Beauty
           </h1>
@@ -59,7 +59,7 @@ const HomeGallery = () => {
             qui, animi magni veniam? Animi sequi reprehenderit Lorem ipsum dolor
             sit amet.
           </p>
-          <button className="text-white bg-green-600 text-lg px-8 rounded-full py-2 mt-14 w-[50%]">
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-14 w-[50%]">
             See more
           </button>
         </div>

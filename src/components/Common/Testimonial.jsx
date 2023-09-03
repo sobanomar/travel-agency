@@ -5,9 +5,9 @@ import testmonialPortrait from "../../assets/testimonial-portrait.jpg";
 import testimonialArrow from "../../assets/testimonial-arrow.png";
 import StarIcon from "@mui/icons-material/Star";
 
-const TestimonialAbout = () => {
+const Testimonial = () => {
   return (
-    <div className="flex mx-20 mt-80 mb-20">
+    <div className="flex mx-20 mt-52 mb-20">
       <div className="w-[50%] flex flex-col gap-7 justify-end">
         <div className="flex flex-col gap-5 w-[90%]">
           <h1>Testimonials</h1>
@@ -49,12 +49,12 @@ const TestimonialAbout = () => {
         />
         <img
           src={testmonialPortrait}
-          className="absolute z-10 w-[22rem] h-[25rem] -top-32 rounded-lg -rotate-3 object-cover object-left  shadow-[0px_0px_30px_0px] shadow-purple-600"
+          className="absolute z-10 w-[22rem] h-[25rem] -top-32 rounded-lg -rotate-3 object-cover object-left  img-glow"
           alt=""
         />
         <img
           src={testmonialBack}
-          className="w-[32rem] h-[45rem] object-cover rounded-lg rotate-3 ml-40 shadow-[0px_0px_30px_0px] shadow-purple-600"
+          className="w-[32rem] h-[45rem] object-cover rounded-lg rotate-3 ml-40 img-glow"
           alt=""
         />
       </div>
@@ -62,4 +62,4 @@ const TestimonialAbout = () => {
   );
 };
 
-export default TestimonialAbout;
+export default Testimonial;

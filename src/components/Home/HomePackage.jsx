@@ -4,23 +4,30 @@ import pic2 from "../../assets/home-package-2.jpg";
 import filledStar from "../../assets/home-popular-des-filledStar.png";
 import hollowStar from "../../assets/home-popular-des-hollowStar.png";
 
+import ArrowForward from "@mui/icons-material/ArrowForward";
+
 const HomePackage = () => {
   return (
     <div className="mx-20">
-      <h1 className="text-left text-sm mt-20">Package</h1>
+      <h1 className="text-left text-sm mt-20 text-purple-600 font-semibold">
+        Package
+      </h1>
       <div className="flex gap-10 justify-between">
         <h1 className="text-5xl mt-5 w-[50%]">
           We Provide A Choice Of Packages Suitable For You
         </h1>
         <div>
-          <h1 className="text-sm mt-14">See more -/</h1>
+          <h1 className="text-sm  text-purple-600 font-semibold cursor-pointer">
+            <span className="m-1">See more</span>
+            <ArrowForward className="mb-0.5" />
+          </h1>
         </div>
       </div>
       <div className="flex mt-20 ">
         <div className="w-[100%] ">
           <img
             src={pic1}
-            className="w-[100%] h-[100%] rounded-3xl object-cover rotate-2"
+            className="w-[100%] h-[100%] rounded-3xl object-cover rotate-2 img-glow"
           />
         </div>
         <div className="flex flex-col mx-28 mt-10">
@@ -58,17 +65,17 @@ const HomePackage = () => {
               Eveniet hic modi veniam?
             </p>
           </div>
-          <button className="text-white bg-green-600 text-lg px-8 rounded-full py-2 mt-10 w-[25%]">
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-10 w-[25%]">
             See detail
           </button>
         </div>
       </div>
 
       <div className="flex mt-28">
-        <div className="flex flex-col mx-36 mt-10">
+        <div className="flex flex-col mx-20 mt-10 ">
           {/* name & price */}
           <span className="flex gap-2">
-            <h1 className="text-5xl font-bold">Thailand | </h1>
+            <h1 className="text-5xl font-bold">India | </h1>
             <h1 className="text-3xl font-bold mt-[12px]"> $300 /</h1>
             <h1 className="text-lg mt-[19px]">2 days</h1>
           </span>
@@ -100,14 +107,14 @@ const HomePackage = () => {
               Eveniet hic modi veniam?
             </p>
           </div>
-          <button className="text-white bg-green-600 text-lg px-8 rounded-full py-2 mt-10 w-[25%]">
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-10 w-[25%] ">
             See detail
           </button>
         </div>
         <div className="w-[100%] ">
           <img
             src={pic2}
-            className="w-[100%] h-[100%] rounded-3xl object-cover rotate-2"
+            className="w-[100%] h-[100%] rounded-3xl object-cover -rotate-2 img-glow"
           />
         </div>
       </div>

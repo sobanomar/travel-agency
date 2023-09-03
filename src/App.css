@@ -12,3 +12,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.img-glow {
+  box-shadow: 0px 0px 30px 0px purple;
+}

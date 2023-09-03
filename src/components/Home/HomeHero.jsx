@@ -28,9 +28,8 @@ const HomeHero = () => {
         />
         <div className="w-[50%]">
           <img
-            className="rotate-3 ml-8 z-0 -mt-5 h-[115%] w-[100%] object-cover rounded-xl"
+            className="rotate-3 ml-8 z-0 -mt-5 h-[115%] w-[100%] object-cover rounded-xl img-glow"
             src={homeHero}
-            alt=""
           />
         </div>
       </div>
