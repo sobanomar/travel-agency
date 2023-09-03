@@ -30,7 +30,7 @@ const HomeAbout = () => {
       </div>
       <div className="w-[50%] flex flex-col justify-between">
         <div className="flex flex-col gap-5">
-          <p className="text-green-500">About us</p>
+          <p className="text-purple-600">About us</p>
           <h1 className="text-5xl w-[80%]">
             Visiting My Friend Travels provides beautiful dream places for you
           </h1>
@@ -41,7 +41,7 @@ const HomeAbout = () => {
             aliquam odit perspiciatis molestias modi minus iure iusto velit
             quas?
           </p>
-          <button className="text-white bg-green-500 py-2 px-10 mt-10 rounded-full w-52">
+          <button className="text-white bg-purple-600 py-2 px-10 mt-10 rounded-full w-52">
             <Link to="/about">See Detail</Link>
           </button>
         </div>

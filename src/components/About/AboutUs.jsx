@@ -7,18 +7,18 @@ import homeAboutArrow from "../../assets/home-about-arrow.png";
 const AboutUs = () => {
   return (
     <div className="flex mx-20 mb-96 mt-28">
-      <div className="w-[50%] flex relative">
+      <div className="w-[50rem] flex relative">
         <div className="ml-28 -rotate-3">
           <img
             src={homeAbout1}
-            className="rounded-lg w-[25rem] h-[35rem] object-cover shadow-[0px_0px_30px_0px] shadow-purple-700"
+            className="rounded-lg w-[22rem] h-[35rem] object-cover shadow-[0px_0px_30px_0px] shadow-purple-700"
             alt=""
           />
         </div>
         <div className="absolute left-[25rem] rotate-3 top-[17rem] w-[25rem]">
           <img
             src={homeAbout2}
-            className="rounded-lg object-cover h-[30rem] w-[100%] shadow-[0px_0px_30px_0px] shadow-purple-700"
+            className="rounded-lg object-cover h-[30rem] w-[90%] shadow-[0px_0px_30px_0px] shadow-purple-700"
             alt=""
           />
           <img
@@ -28,14 +28,14 @@ const AboutUs = () => {
           />
         </div>
       </div>
-      <div className="w-[55%] flex flex-col justify-between">
+      <div className="w-[50rem] flex flex-col justify-between">
         <div className="flex flex-col gap-5">
           <p className="text-purple-700 font-semibold">About us</p>
           <h1 className="text-5xl w-[80%]">
             Visiting My Friend Travels provides beautiful dream places for you
           </h1>
         </div>
-        <div className="flex flex-col ml-60 gap-3">
+        <div className="flex flex-col ml-48 gap-3">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
             velit id fuga eaque asperiores odio temporibus repellat quod nemo
