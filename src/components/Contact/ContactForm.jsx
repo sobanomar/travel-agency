@@ -33,8 +33,8 @@ const ContactForm = () => {
                 <div className="w-[50%] flex flex-col gap-3">
                   <h1 className="text-3xl">Your Phone*</h1>
                   <input
-                    type="text"
-                    placeholder="Enter First Name"
+                    type="tel"
+                    placeholder="Enter Your Phone Number"
                     className="border border-black rounded-3xl p-3 w-[80%]"
                   />
                 </div>
@@ -42,7 +42,7 @@ const ContactForm = () => {
                   <h1 className="text-3xl">Your Email*</h1>
                   <input
                     type="email"
-                    placeholder="Enter Last Name"
+                    placeholder="Enter Email"
                     className="border border-black rounded-3xl p-3 w-[80%]"
                   />
                 </div>
@@ -59,7 +59,7 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <button className="text-white w-[25%] bg-purple-800 py-2 px-10  rounded-full ">
+        <button className="text-white w-[30%] bg-purple-800 py-2 px-10  rounded-full ">
           Send Message
         </button>
       </div>
