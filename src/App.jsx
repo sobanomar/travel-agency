@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact/Contact";
 
 const AppLayout = () => {
   return (
@@ -28,6 +29,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
