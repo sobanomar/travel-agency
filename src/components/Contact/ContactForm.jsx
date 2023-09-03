@@ -34,7 +34,7 @@ const ContactForm = () => {
                   <h1 className="text-3xl">Your Phone*</h1>
                   <input
                     type="tel"
-                    placeholder="Enter Your Phone Number"
+                    placeholder="Enter Phone Number"
                     className="border border-black rounded-3xl p-3 w-[80%]"
                   />
                 </div>

@@ -32,7 +32,7 @@ const Footer = () => {
                 <a className="m-1">
                   <LinkedInIcon />
                 </a>
-                <a className="m-1">
+                <a className="m-1 ">
                   <InstagramIcon />
                 </a>
               </div>
