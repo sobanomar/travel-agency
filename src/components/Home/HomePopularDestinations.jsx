@@ -25,7 +25,7 @@ const HomePopularDestinations = () => {
         </div>
       </div>
       <div className="flex gap-28 mt-20">
-        <div className="w-[100%]">
+        <div className="w-[100%] ">
           <div className="w-[100%]  ">
             <img
               src={pic1}
@@ -47,11 +47,13 @@ const HomePopularDestinations = () => {
               4/5 <span className="font-bold ml-2">$225,99/</span>day
             </p>
           </span>
-          <p className="text-sm w-[70%] mt-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            culpa accusantium voluptatibus magnam, quia provident.
-          </p>
-          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-10">
+          <div className="h-[5rem]">
+            <p className="text-sm w-[70%] mt-7">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem repellat esse harum inventore rerum temporibus.
+            </p>
+          </div>
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-5">
             See detail
           </button>
         </div>
@@ -77,11 +79,13 @@ const HomePopularDestinations = () => {
               4/5 <span className="font-bold ml-2">$225,99/</span>day
             </p>
           </span>
-          <p className="text-sm w-[90%] mt-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            culpa accusantium voluptatibus magnam, quia provident.
-          </p>
-          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-10 ">
+          <div className="h-[5rem]">
+            <p className="text-sm w-[70%] mt-7">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem repellat esse harum inventore rerum temporibus.
+            </p>
+          </div>
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-5">
             See detail
           </button>
         </div>
@@ -107,11 +111,13 @@ const HomePopularDestinations = () => {
               4/5 <span className="font-bold ml-2">$225,99/</span>day
             </p>
           </span>
-          <p className="text-sm w-[70%] mt-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            culpa accusantium voluptatibus magnam, quia provident.
-          </p>
-          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-10">
+          <div className="h-[5rem]">
+            <p className="text-sm w-[70%] mt-7">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem repellat esse harum inventore rerum temporibus.
+            </p>
+          </div>
+          <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 mt-5">
             See detail
           </button>
         </div>

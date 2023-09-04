@@ -9,8 +9,8 @@ const HomeHero = () => {
     <div>
       <div className="flex h-screen bg-purple-500">
         <div className="w-[50%] text-white flex justify-center  ">
-          <div className="flex flex-col gap-20 items-center w-[70%] z-50">
-            <h1 className="text-7xl mt-44 ">
+          <div className="flex flex-col gap-20 justify-center w-[70%] z-50">
+            <h1 className="text-5xl ">
               Find Beautiful Dream Places With Visiting My Friend Travels
             </h1>
             <p className="text-sm">
