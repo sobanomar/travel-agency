@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  Container,
+  Typography,
+  Grid,
+  Box,
+  Divider,
+  IconButton,
+  Paper,
+} from "@mui/material";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
@@ -6,28 +15,42 @@ import PublicOutlinedIcon from "@mui/icons-material/PublicOutlined";
 
 const Info = () => {
   return (
-    <>
-      <div className=" border-gray-400 border-t py-7 px-20 flex justify-around">
-        <div className="flex">
-          <PhoneOutlinedIcon className="m-1" />
-          <h1 className="font-semibold text-xl">+123456789</h1>
-        </div>
-        <div className="flex">
-          <EmailOutlinedIcon className="m-1" />
-          <h1 className="font-semibold text-xl">
-            visitingmyfriendtravels@gmail.com
-          </h1>
-        </div>
-        <div className="flex">
-          <FmdGoodOutlinedIcon className="m-1" />
-          <h1 className="font-semibold text-xl">Your Location</h1>
-        </div>
-        <div className="flex">
-          <PublicOutlinedIcon className="m-1" />
-          <h1 className="font-semibold text-xl">visitingmyfriendtravels.com</h1>
-        </div>
-      </div>
-    </>
+    <Paper elevation={0} sx={{ background: "white" }}>
+      <Container>
+        <Box py={3}>
+          <Grid container justifyContent="space-around">
+            <Grid item xs={12} sm={6} md={3}>
+              <Box display="flex" alignItems="center">
+                <PhoneOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body1">+123456789</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Box display="flex" alignItems="center">
+                <EmailOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body1">
+                  visitingmyfriendtravels@gmail.com
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Box display="flex" alignItems="center">
+                <FmdGoodOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body1">Your Location</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Box display="flex" alignItems="center">
+                <PublicOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body1">
+                  visitingmyfriendtravels.com
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </Paper>
   );
 };
 

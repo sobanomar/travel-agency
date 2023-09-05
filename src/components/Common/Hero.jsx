@@ -1,3 +1,56 @@
+// import React from "react";
+// import { Container, Typography, Grid, Paper } from "@mui/material";
+// import map1 from "../../assets/aboutus-map-1.png";
+// import map2 from "../../assets/aboutus-map-2.png";
+// import bg from "../../assets/bg-about.jpg";
+
+// const Hero = ({ heading, textHero }) => {
+//   return (
+//     <Paper
+//       elevation={0}
+//       sx={{
+//         background: `url(${bg}) no-repeat center center fixed`,
+//         backgroundSize: "cover",
+//         height: "44.3rem",
+//       }}
+//     >
+//       <Container>
+//         <Grid
+//           container
+//           alignItems="center"
+//           justifyContent="center"
+//           height="100%"
+//         >
+//           <Grid item xs={12} sm={6}>
+//             <Typography variant="h3" align="center" color="textPrimary">
+//               {heading}
+//             </Typography>
+//             <Typography
+//               variant="body1"
+//               align="center"
+//               color="textSecondary"
+//               mt={4}
+//             >
+//               {textHero}
+//             </Typography>
+//           </Grid>
+//           <Grid item xs={12} sm={6}>
+//             <Grid container justifyContent="flex-end">
+//               <img
+//                 src={map1}
+//                 alt="Map 1"
+//                 style={{ maxWidth: "100%", height: "auto" }}
+//               />
+//             </Grid>
+//           </Grid>
+//         </Grid>
+//       </Container>
+//     </Paper>
+//   );
+// };
+
+// export default Hero;
+
 import React from "react";
 import map1 from "../../assets/aboutus-map-1.png";
 import map2 from "../../assets/aboutus-map-2.png";
@@ -5,15 +58,17 @@ import bg from "../../assets/bg-about.jpg";
 
 const Hero = ({ heading, textHero }) => {
   return (
-    <div className="w-full   h-[44.3rem] overflow-hidden  ">
-      <div className="absolute left-[30rem] top-72 w-[36rem]  ">
-        <h1 className="text-7xl text-center text-white">{heading}</h1>
-        <p className="text-sm text-center mt-10 text-white">{textHero}</p>
+    <div className="w-full lg:h-[44.3rem] overflow-hidden  ">
+      <div className="flex justify-center">
+        <div className="absolute lg:w-[40%] flex flex-col md:m-52 sm:m-32 lg:mt-60">
+          <h1 className="text-7xl text-center text-white">{heading}</h1>
+          <p className="text-sm text-center mt-10 text-white">{textHero}</p>
+        </div>
       </div>
 
       <div className="relative  ">
         <img src={map1} className="absolute left-[65rem] w-1/3" />
-        <img src={map2} className="absolute w-1/3 top-72" />
+        <img src={map2} className="absolute w-1/3 top-72 " />
       </div>
       <img src={bg} className="z-0 m-0 w-full" />
     </div>

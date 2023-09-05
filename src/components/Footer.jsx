@@ -1,5 +1,14 @@
 import React from "react";
-import footerMap from "../assets/footer-map.png";
+import {
+  Container,
+  Typography,
+  Grid,
+  Box,
+  Divider,
+  IconButton,
+  Button,
+  Paper,
+} from "@mui/material";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
@@ -7,86 +16,114 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import footerMap from "../assets/footer-map.png";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-purple-600">
-      <img className="absolute w-[70rem] " src={footerMap} alt="" />
-      <div className="text-white mx-20">
-        <div className="py-11">
-          <div className="flex justify-around">
-            <div className="w-60">
-              <div className="text-xl font-semibold my-4">Agency</div>
-              <p className="py-2 font-thin">
+    <Paper elevation={0} sx={{ background: "purple", color: "white" }}>
+      <img
+        className="absolute"
+        src={footerMap}
+        alt=""
+        style={{ width: "73%", height: "auto" }}
+      />
+      <Container className="">
+        <Box py={3}>
+          <Grid container justifyContent="space-around">
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                Agency
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Voluptatibus nisi quos nemo, placeat porro ex molestias magnam
                 perferendis laudantium nobis voluptate enim est incidunt animi.
-              </p>
-              <div className="my-2">
-                <a className="m-1">
+              </Typography>
+              <Box display="flex">
+                <IconButton>
                   <FacebookIcon />
-                </a>
-                <a className="m-1">
+                </IconButton>
+                <IconButton>
                   <TwitterIcon />
-                </a>
-                <a className="m-1">
+                </IconButton>
+                <IconButton>
                   <LinkedInIcon />
-                </a>
-                <a className="m-1 ">
+                </IconButton>
+                <IconButton>
                   <InstagramIcon />
-                </a>
-              </div>
-            </div>
-            <div className="w-60">
-              <div className="text-xl font-semibold my-4">Page</div>
-              <p className="my-1 font-thin">Packages</p>
-              <p className="my-1 font-thin">Gallery</p>
-              <p className="my-1 font-thin"> Tour Guide</p>
-              <p className="my-1 font-thin">FaQ</p>
-            </div>
-            <div className="w-60">
-              <div className="text-xl font-semibold my-4">Links</div>
-              <p className="my-1 font-thin">Terms of use</p>
-              <p className="my-1 font-thin">Privacy Policy</p>
-            </div>
-            <div className="w-60">
-              <div className="text-xl font-semibold my-4">Contact Us</div>
-              <div className="flex">
-                <PhoneOutlinedIcon className="m-2" />
-                <p className="my-1 font-thin">+12 756 234</p>
-              </div>
-              <div className="flex">
-                <MailOutlineOutlinedIcon className="m-2" />
-
-                <p className="my-1 font-thin">mail@mail.com</p>
-              </div>
-              <div className="flex">
-                <FmdGoodOutlinedIcon className="m-2" />
-                <p className="my-1 font-thin">located here</p>
-              </div>
-            </div>
-            <div className="w-60">
-              <div className="text-xl font-semibold my-4">
+                </IconButton>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={2}>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                Page
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                Packages
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                Gallery
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                Tour Guide
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                FaQ
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6} md={2}>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                Links
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                Terms of use
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                Privacy Policy
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                Contact Us
+              </Typography>
+              <Box display="flex" alignItems="center" mb={1}>
+                <PhoneOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body2">+12 756 234</Typography>
+              </Box>
+              <Box display="flex" alignItems="center" mb={1}>
+                <MailOutlineOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body2">mail@mail.com</Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <FmdGoodOutlinedIcon sx={{ mr: 1 }} />
+                <Typography variant="body2">located here</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={2}>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
                 Booking Destination
-              </div>
-              <div className="flex">
-                <p className="my-1 font-thin">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Commodi, saepe!
-                </p>
-              </div>
-              <button className="text-white bg-purple-800 py-2 px-10 mt-10 rounded-full ">
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Commodi, saepe!
+              </Typography>
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "purple", color: "white" }}
+              >
                 Booking Now
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
-          <hr />
-          <p className="p-1">Copyright @ 2023 | All Rights Reserved</p>
-        </div>
-      </div>
-    </div>
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+        <Divider />
+        <Box py={1} textAlign="center">
+          <Typography variant="body2" sx={{ pt: 1 }}>
+            Copyright @ 2023 | All Rights Reserved
+          </Typography>
+        </Box>
+      </Container>
+    </Paper>
   );
 };
 

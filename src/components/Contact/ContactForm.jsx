@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -12,15 +12,6 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import PhoneInputField from "./PhoneInputField";
 
 const ContactForm = () => {
-  const styles = (theme) => ({
-    field: {
-      margin: "10px 0",
-    },
-    countryList: {
-      ...theme.typography.body1,
-    },
-  });
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -42,48 +33,37 @@ const ContactForm = () => {
     },
   });
 
+  const renderTextField = (name, label, type = "text", multiline = false) => (
+    <TextField
+      fullWidth
+      id={name}
+      name={name}
+      label={label}
+      type={type}
+      variant="outlined"
+      onChange={formik.handleChange}
+      onBlur={formik.handleBlur}
+      value={formik.values[name]}
+      error={formik.touched[name] && Boolean(formik.errors[name])}
+      helperText={formik.touched[name] && formik.errors[name]}
+      multiline={multiline}
+    />
+  );
+
   return (
     <Container className="m-20">
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h2" gutterBottom style={{ fontWeight: "400" }}>
+          <Typography variant="h2" gutterBottom sx={{ fontWeight: 400 }}>
             Get In Touch
           </Typography>
           <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={6}>
-                <TextField
-                  fullWidth
-                  id="firstName"
-                  name="firstName"
-                  label="First Name*"
-                  variant="outlined"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.firstName}
-                  error={
-                    formik.touched.firstName && Boolean(formik.errors.firstName)
-                  }
-                  helperText={
-                    formik.touched.firstName && formik.errors.firstName
-                  }
-                />
+                {renderTextField("firstName", "First Name*")}
               </Grid>
               <Grid item xs={6}>
-                <TextField
-                  fullWidth
-                  id="lastName"
-                  name="lastName"
-                  label="Last Name*"
-                  variant="outlined"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.lastName}
-                  error={
-                    formik.touched.lastName && Boolean(formik.errors.lastName)
-                  }
-                  helperText={formik.touched.lastName && formik.errors.lastName}
-                />
+                {renderTextField("lastName", "Last Name*")}
               </Grid>
               <Grid item xs={6}>
                 <PhoneInputField
@@ -98,52 +78,28 @@ const ContactForm = () => {
                 />
               </Grid>
               <Grid item xs={6}>
-                <TextField
-                  fullWidth
-                  id="email"
-                  name="email"
-                  label="Your Email*"
-                  variant="outlined"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.email}
-                  error={formik.touched.email && Boolean(formik.errors.email)}
-                  helperText={formik.touched.email && formik.errors.email}
-                />
+                {renderTextField("email", "Your Email*")}
               </Grid>
               <Grid item xs={12}>
-                <TextField
-                  fullWidth
-                  multiline
-                  id="message"
-                  name="message"
-                  label="Your Message*"
-                  variant="outlined"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.message}
-                  error={
-                    formik.touched.message && Boolean(formik.errors.message)
-                  }
-                  helperText={formik.touched.message && formik.errors.message}
-                />
+                {renderTextField("message", "Your Message*", "text", true)}
+              </Grid>
+              <Grid item xs={12}>
+                <Box mt={2}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    disabled={formik.isSubmitting}
+                  >
+                    Send Message
+                  </Button>
+                </Box>
               </Grid>
             </Grid>
-            <Box mt={2}>
-              <Button
-                variant="contained"
-                color="primary"
-                type="submit"
-                disabled={formik.isSubmitting}
-              >
-                Send Message
-              </Button>
-            </Box>
           </form>
         </Grid>
         <Grid item xs={12} md={6}>
           <div style={{ height: "400px" }}>
-            {/* Replace with your Google Map */}
             <LoadScript googleMapsApiKey="AIzaSyAPkTZqSTX4xwSo2BOO6GsSa53TAACPuvI">
               <GoogleMap
                 mapContainerStyle={{
