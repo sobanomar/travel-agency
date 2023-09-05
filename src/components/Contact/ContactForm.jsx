@@ -54,9 +54,9 @@ const ContactForm = () => {
     <Container className="m-20">
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h2" gutterBottom sx={{ fontWeight: 400 }}>
+          <h1 className="text-4xl font-semibold mb-5 md:text-5xl">
             Get In Touch
-          </Typography>
+          </h1>
           <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={6}>

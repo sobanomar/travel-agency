@@ -58,10 +58,12 @@ import bg from "../../assets/bg-about.jpg";
 
 const Hero = ({ heading, textHero }) => {
   return (
-    <div className="w-full lg:h-[44.3rem] overflow-hidden  ">
+    <div className="w-full h-[30rem] md:h-[100%] lg:h-[44.3rem] overflow-hidden  ">
       <div className="flex justify-center">
-        <div className="absolute lg:w-[40%] flex flex-col md:m-52 sm:m-32 lg:mt-60">
-          <h1 className="text-7xl text-center text-white">{heading}</h1>
+        <div className="absolute lg:w-[40%] w-[80%] flex top-36 md:top-40 flex-col md:m-52 sm:m-32 lg:mt-60">
+          <h1 className="md:text-7xl text-5xl text-center text-white">
+            {heading}
+          </h1>
           <p className="text-sm text-center mt-10 text-white">{textHero}</p>
         </div>
       </div>
@@ -70,7 +72,7 @@ const Hero = ({ heading, textHero }) => {
         <img src={map1} className="absolute left-[65rem] w-1/3" />
         <img src={map2} className="absolute w-1/3 top-72 " />
       </div>
-      <img src={bg} className="z-0 m-0 w-full" />
+      <img src={bg} className="z-0 m-0 w-full h-full object-cover" />
     </div>
   );
 };

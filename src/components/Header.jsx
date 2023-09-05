@@ -1,46 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="w-full absolute flex flex-col md:flex-row justify-between px-5 md:px-20 py-5 md:py-10 bg-gradient-to-b from-black text-white z-50">
-      <div className="text-xl text-center md:text-left mb-3 md:mb-0">
-        <h1>VISITING MY FRIEND TRAVELS</h1>
-      </div>
-      <div className="text-center md:text-left">
-        <nav>
-          <Link
-            className="block md:inline-block mx-2 md:mx-4 my-2 md:my-0"
-            to="/"
-          >
+    <div className="bg-gradient-to-b from-black text-white absolute w-full">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
+        <div className="text-xl">
+          <h1 className="md:text-xl text-[16px]">VISITING MY FRIEND TRAVELS</h1>
+        </div>
+        <div className="hidden md:flex space-x-4">
+          <Link to="/" className="hover:text-gray-400 ">
             Home
           </Link>
-          <Link
-            className="block md:inline-block mx-2 md:mx-4 my-2 md:my-0"
-            to="/about"
-          >
+          <Link to="/about" className="hover:text-gray-400">
             About
           </Link>
-          <Link
-            className="block md:inline-block mx-2 md:mx-4 my-2 md:my-0"
-            to="/destination"
-          >
+          <Link to="/destination" className="hover:text-gray-400">
             Destination
           </Link>
-          <Link
-            className="block md:inline-block mx-2 md:mx-4 my-2 md:my-0"
-            to="/gallery"
-          >
+          <Link to="/gallery" className="hover:text-gray-400">
             Our Gallery
           </Link>
-          <Link
-            className="block md:inline-block mx-2 md:mx-4 my-2 md:my-0"
-            to="/contact"
-          >
+          <Link to="/contact" className="hover:text-gray-400">
             Contact Us
           </Link>
-        </nav>
+        </div>
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-white bg-purple-800 px-1 rounded-md"
+          >
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden absolute w-[100%] z-10">
+          <div className="bg-purple-900 text-white py-4 px-6 space-y-2">
+            <Link
+              to="/"
+              onClick={toggleMenu}
+              className="block hover:text-gray-400"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={toggleMenu}
+              className="block hover:text-gray-400"
+            >
+              About
+            </Link>
+            <Link
+              to="/destination"
+              onClick={toggleMenu}
+              className="block hover:text-gray-400"
+            >
+              Destination
+            </Link>
+            <Link
+              to="/gallery"
+              onClick={toggleMenu}
+              className="block hover:text-gray-400"
+            >
+              Our Gallery
+            </Link>
+            <Link
+              to="/contact"
+              onClick={toggleMenu}
+              className="block hover:text-gray-400"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
