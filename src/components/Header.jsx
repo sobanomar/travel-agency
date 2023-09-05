@@ -10,14 +10,44 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const menuOptions = [
+    {
+      to: "/",
+      label: "Home",
+    },
+    {
+      to: "/about",
+      label: "About",
+    },
+    {
+      to: "/destination",
+      label: "Destination",
+    },
+    {
+      to: "/gallery",
+      label: "Gallery",
+    },
+    {
+      to: "/contact",
+      label: "Contact",
+    },
+  ];
+
   return (
     <div className="bg-gradient-to-b from-black text-white absolute w-full">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
+      <div className="flex justify-between items-center py-8 mx-20  md:px-0">
         <div className="text-xl">
-          <h1 className="md:text-xl text-[16px]">VISITING MY FRIEND TRAVELS</h1>
+          <h1 className="md:text-xl lg:text-3xl text-[16px]">
+            VISITING MY FRIEND TRAVELS
+          </h1>
         </div>
         <div className="hidden md:flex space-x-4">
-          <Link to="/" className="hover:text-gray-400 ">
+          {menuOptions.map((option) => {
+            <Link id={option.label} to={option.to}>
+              {option.label}
+            </Link>;
+          })}
+          <Link to="/" className="hover:text-gray-400">
             Home
           </Link>
           <Link to="/about" className="hover:text-gray-400">
