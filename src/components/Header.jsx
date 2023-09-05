@@ -10,34 +10,34 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="bg-gradient-to-b from-black text-white absolute w-full">
-      <div className="flex justify-between items-center py-8 mx-20  md:px-0">
+    <div className="bg-gradient-to-b from-black text-white absolute w-full z-10">
+      <div className="flex justify-between md:mx-8 lg:mx-20 py-8 mx-5  md:px-0">
         <div className="text-xl">
           <h1 className="md:text-xl lg:text-3xl text-[16px]">
             VISITING MY FRIEND TRAVELS
           </h1>
         </div>
         <div className="hidden md:flex space-x-4">
-          <Link to="/" className="hover:text-gray-400">
+          <Link to="/" className="hover:text-purple-400">
             Home
           </Link>
-          <Link to="/about" className="hover:text-gray-400">
+          <Link to="/about" className="hover:text-purple-400">
             About
           </Link>
-          <Link to="/destination" className="hover:text-gray-400">
+          <Link to="/destination" className="hover:text-purple-400">
             Destination
           </Link>
-          <Link to="/gallery" className="hover:text-gray-400">
+          <Link to="/gallery" className="hover:text-purple-400">
             Our Gallery
           </Link>
-          <Link to="/contact" className="hover:text-gray-400">
+          <Link to="/contact" className="hover:text-purple-400">
             Contact Us
           </Link>
         </div>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white bg-purple-800 px-1 rounded-md"
+            className="text-white bg-purple-800 pt-1.5 p-2 rounded-md"
           >
             {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>

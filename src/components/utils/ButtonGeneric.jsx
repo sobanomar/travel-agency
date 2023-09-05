@@ -1,8 +1,9 @@
 import React from "react";
 
-const ButtonGeneric = ({ disabled, label }) => {
+const ButtonGeneric = ({ disabled, label, children }) => {
   return (
     <button
+      type="button"
       disabled={disabled}
       className={
         disabled
@@ -10,7 +11,7 @@ const ButtonGeneric = ({ disabled, label }) => {
           : "text-white bg-purple-600 py-2 px-10 mb-5 rounded w-full"
       }
     >
-      {label}
+      {children}
     </button>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -10,9 +10,11 @@ import Box from "@mui/material/Box";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import PhoneInputField from "./PhoneInputField";
-import ButtonGeneric from "../utils/ButtonGeneric";
+import { CircularProgress } from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const ContactForm = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -29,8 +31,36 @@ const ContactForm = () => {
       message: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      // Handle form submission here
-      console.log(values);
+      const url = "http://35.173.181.194:8000/contactus/";
+      const data = {
+        email: values.email,
+        first_name: values.firstName,
+        last_name: values.lastName,
+        message: values.message,
+        phone_number: values.phone,
+      };
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((responseData) => {
+          setFormSubmitted(true);
+          formik.setSubmitting(false);
+          console.log("Response Data:", responseData);
+        })
+        .catch((error) => {
+          console.error("Fetch Error:", error);
+        });
     },
   });
 
@@ -55,9 +85,13 @@ const ContactForm = () => {
     <Container className="m-20">
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <h1 className="text-4xl font-semibold mb-5 md:text-5xl">
+          {/* <Typography variant="h2" gutterBottom sx={{ fontWeight: 400 }}>
             Get In Touch
-          </h1>
+          </Typography> */}
+          <div className="text-4xl font-semibold md:text-5xl mb-10">
+            Get In Touch
+          </div>
+
           <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={6}>
@@ -86,16 +120,34 @@ const ContactForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box mt={2}>
-                  <ButtonGeneric
-                    disabled={formik.isSubmitting}
-                    label="Send Message"
-                  />
+                  <div className="flex">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      type="submit"
+                      // disabled={formik.isSubmitting}
+                    >
+                      {formik.isSubmitting ? (
+                        <CircularProgress color="inherit" size={"80%"} />
+                      ) : formSubmitted ? (
+                        <CheckCircleIcon />
+                      ) : (
+                        "Send Message"
+                      )}
+                      {/* <CircularProgress color="inherit" size={"40%"} /> */}
+                    </Button>
+                    <p className="text-black font-semibold mx-2 my-1">
+                      {formSubmitted
+                        ? "We have received your message. Our team will contact you shortly"
+                        : ""}
+                    </p>
+                  </div>
                 </Box>
               </Grid>
             </Grid>
           </form>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} mt={2}>
           <div style={{ height: "400px" }}>
             <LoadScript googleMapsApiKey="AIzaSyAPkTZqSTX4xwSo2BOO6GsSa53TAACPuvI">
               <GoogleMap
