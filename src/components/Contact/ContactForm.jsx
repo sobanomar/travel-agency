@@ -10,6 +10,7 @@ import Box from "@mui/material/Box";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import PhoneInputField from "./PhoneInputField";
+import ButtonGeneric from "../utils/ButtonGeneric";
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -85,14 +86,10 @@ const ContactForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box mt={2}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
+                  <ButtonGeneric
                     disabled={formik.isSubmitting}
-                  >
-                    Send Message
-                  </Button>
+                    label="Send Message"
+                  />
                 </Box>
               </Grid>
             </Grid>
