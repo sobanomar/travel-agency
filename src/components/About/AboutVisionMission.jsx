@@ -8,7 +8,7 @@ import arrowLower from "../../assets/arrow-lower.png";
 const AboutVisionMission = () => {
   return (
     <div className="">
-      <div className="flex mx-20 my-32 justify-around">
+      <div className="flex mx-20 my-32 justify-around ">
         <div className="w-[35rem]">
           <h3 className="text-purple-500 font-semibold">Vision</h3>
           <h1 className="text-5xl my-4 mx-2">Our Vision</h1>
@@ -48,18 +48,22 @@ const AboutVisionMission = () => {
       </div>
       <div className="relative">
         <img
-          className="absolute top-[-50rem] left-[60rem] w-[35rem]"
+          className="absolute top-[-50rem] left-[60rem] w-[35rem] hidden"
           src={mapRight}
           alt=""
         />
-        <img className="absolute top-[-24rem] w-[27rem]" src={mapLeft} alt="" />
         <img
-          className="absolute top-[-40rem] left-[30rem] w-[25rem]"
+          className="absolute top-[-24rem] w-[27rem] hidden"
+          src={mapLeft}
+          alt=""
+        />
+        <img
+          className="absolute top-[-40rem] left-[30rem] w-[25rem] hidden"
           src={arrowUpper}
           alt=""
         />
         <img
-          className="absolute top-[-15rem] w-[25rem] left-[25rem]"
+          className="absolute top-[-15rem] w-[25rem] left-[25rem] hidden"
           src={arrowLower}
           alt=""
         />

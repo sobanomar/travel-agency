@@ -54,7 +54,7 @@ const Testimonial = () => {
         />
         <img
           src={testmonialBack}
-          className="w-[32rem] h-[45rem] object-cover rounded-lg rotate-3 ml-40 img-glow"
+          className="w-[32rem] h-[45rem] object-cover rounded-lg rotate-3 ml-0 img-glow"
           alt=""
         />
       </div>

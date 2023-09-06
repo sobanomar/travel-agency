@@ -9,15 +9,15 @@ const AboutBestPackage = () => {
       <div>
         <img className="absolute w-[30rem] top-[5.1rem]" src={mapLeft} alt="" />
         <img
-          className="absolute left-[65rem] w-[30rem]"
+          className="absolute left-[65rem] w-[30rem] hidden"
           src={mapRight}
           alt=""
         />
       </div>
       <div className="flex justify-center">
-        <div className="absolute text-white flex flex-col items-center top-16">
+        <div className="absolute text-white flex flex-col items-center top-16 w-[60%]">
           <h1 className="text-7xl my-8">Best Holiday package For You</h1>
-          <p className="w-[37rem] m-2 text-xl font-thin">
+          <p className=" m-2 text-xl font-thin">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             praesentium, veniam soluta eligendi atque sit laudantium ipsam?
             Porro, nihil perferendis?
