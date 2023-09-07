@@ -1,11 +1,12 @@
 import React from "react";
 import AboutWelcome from "./AboutWelcome";
-import AboutBestPackage from "./AboutBestPackage";
+import AboutBestPackage from "../Common/BestPackage";
 import AboutVisionMission from "./AboutVisionMission";
 import AboutUs from "./AboutUs";
 import SuccessStory from "./SuccessStory";
 import Hero from "../Common/Hero";
 import Testimonial from "../Common/Testimonial";
+import BestPackage from "../Common/BestPackage";
 
 const About = () => {
   let textHero =
@@ -16,7 +17,7 @@ const About = () => {
       <AboutUs />
       <AboutVisionMission />
       <AboutWelcome />
-      <AboutBestPackage />
+      <BestPackage />
       <SuccessStory />
       <Testimonial />
     </>

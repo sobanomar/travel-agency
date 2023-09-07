@@ -3,9 +3,9 @@ import bestPackage from "../../assets/img/best-package.jpg";
 import mapLeft from "../../assets/img/best-package-left.png";
 import mapRight from "../../assets/img/best-package-right.png";
 
-const AboutBestPackage = () => {
+const BestPackage = () => {
   return (
-    <div className="sm:my-20 relative h-[20rem] sm:h-[30rem]">
+    <div className="my-5 sm:my-10 md:my-20 relative h-[20rem] sm:h-[30rem]">
       <div>
         <img
           className="absolute w-[40%] top-[23%] hidden"
@@ -40,4 +40,4 @@ const AboutBestPackage = () => {
   );
 };
 
-export default AboutBestPackage;
+export default BestPackage;
