@@ -1,12 +1,12 @@
 import React from "react";
 
-import successAbout from "../../assets/success-story-img-about.jpg";
-import arrowLeft from "../../assets/success-left-arrow.png";
-import arrowRight from "../../assets/success-right-arrow.png";
+import successAbout from "../../assets/img/success-story-img-about.jpg";
+import arrowLeft from "../../assets/img/success-left-arrow.png";
+import arrowRight from "../../assets/img/success-right-arrow.png";
 
 const SuccessStory = () => {
   return (
-    <div className="mx-3 md:mx-10 lg:mx-20 my-10">
+    <div className="mx-5 md:mx-10 lg:mx-20 my-10">
       <div className="text-purple-500 font-semibold text-center md:text-left">
         Success Story
       </div>

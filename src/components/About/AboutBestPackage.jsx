@@ -1,7 +1,7 @@
 import React from "react";
-import bestPackage from "../../assets/best-package.jpg";
-import mapLeft from "../../assets/best-package-left.png";
-import mapRight from "../../assets/best-package-right.png";
+import bestPackage from "../../assets/img/best-package.jpg";
+import mapLeft from "../../assets/img/best-package-left.png";
+import mapRight from "../../assets/img/best-package-right.png";
 
 const AboutBestPackage = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 
-import homeHero from "../../assets/home-hero.jpg";
-import mapHero from "../../assets/home-hero-map.png";
-import getStarted from "../../assets/home-hero-get-started.png";
+import homeHero from "../../assets/img/home-hero.jpg";
+import mapHero from "../../assets/img/home-hero-map.png";
+import getStarted from "../../assets/img/home-hero-get-started.png";
 
 const HomeHero = () => {
   return (

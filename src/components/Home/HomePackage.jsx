@@ -1,8 +1,8 @@
 import React from "react";
-import pic1 from "../../assets/home-package-1.jpg";
-import pic2 from "../../assets/home-package-2.jpg";
-import filledStar from "../../assets/home-popular-des-filledStar.png";
-import hollowStar from "../../assets/home-popular-des-hollowStar.png";
+import pic1 from "../../assets/img/home-package-1.jpg";
+import pic2 from "../../assets/img/home-package-2.jpg";
+import filledStar from "../../assets/img/home-popular-des-filledStar.png";
+import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
 
 import ArrowForward from "@mui/icons-material/ArrowForward";
 

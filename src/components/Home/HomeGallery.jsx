@@ -1,8 +1,9 @@
 import React from "react";
-import pic1 from "../../assets/home-gallery-1.jpg";
-import pic2 from "../../assets/home-gallery-2.jpg";
-import pic3 from "../../assets/home-gallery-3.jpg";
-import pic4 from "../../assets/home-gallery-4.jpg";
+import pic1 from "../../assets/img/home-gallery-1.jpg";
+import pic2 from "../../assets/img/home-gallery-2.jpg";
+import pic3 from "../../assets/img/home-gallery-3.jpg";
+import pic4 from "../../assets/img/home-gallery-4.jpg";
+
 const HomeGallery = () => {
   return (
     <div className="mx-20">

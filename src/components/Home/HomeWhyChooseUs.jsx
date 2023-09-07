@@ -1,8 +1,8 @@
-import whyChooseUsBackground from "../../assets/why-choose-us-bg.jpg";
-import whyGlobe from "../../assets/home-why-globe.png";
-import whyPlane from "../../assets/home-why-plane.png";
-import whyList from "../../assets/home-why-list.png";
-import whyHotel from "../../assets/home-why-hotel.png";
+import whyChooseUsBackground from "../../assets/img/why-choose-us-bg.jpg";
+import whyGlobe from "../../assets/img/home-why-globe.png";
+import whyPlane from "../../assets/img/home-why-plane.png";
+import whyList from "../../assets/img/home-why-list.png";
+import whyHotel from "../../assets/img/home-why-hotel.png";
 
 const HomeWhyChooseUs = () => {
   return (

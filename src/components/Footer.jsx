@@ -16,7 +16,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import footerMap from "../assets/footer-map.png";
+import footerMap from "../assets/img/footer-map.png";
 import ButtonGeneric from "./utils/ButtonGeneric";
 
 const Footer = () => {

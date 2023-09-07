@@ -1,12 +1,12 @@
 import React from "react";
 
-import homeAbout1 from "../../assets/home-about-1.jpg";
-import homeAbout2 from "../../assets/home-about-2.jpg";
-import homeAboutArrow from "../../assets/home-about-arrow.png";
+import homeAbout1 from "../../assets/img/home-about-1.jpg";
+import homeAbout2 from "../../assets/img/home-about-2.jpg";
+import homeAboutArrow from "../../assets/img/home-about-arrow.png";
 
 const AboutUs = () => {
   return (
-    <div className="flex mx-2 md:mx-20 my-5 md:my-20 flex-col md:flex-row">
+    <div className="flex mx-5 md:mx-20 my-5 md:my-20 flex-col md:flex-row">
       <div className="w-[100%] md:w-[50%] md:flex flex-col relative">
         <div className="w-[100%] h-[20rem] md:w-[70%] lg:w-[60%] md:h-[65%]">
           <img

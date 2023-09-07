@@ -1,13 +1,14 @@
 import React from "react";
 
-import testmonialBack from "../../assets/testimonial-back.jpg";
-import testmonialPortrait from "../../assets/testimonial-portrait.jpg";
-import testimonialArrow from "../../assets/testimonial-arrow.png";
+import testimonialBack from "../../assets/img/testimonial-back.jpg";
+import testimonialPortrait from "../../assets/img/testimonial-portrait.jpg";
+import testimonialArrow from "../../assets/img/testimonial-arrow.png";
+
 import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col md:flex-row mx-3 md:mx-10 lg:mx-20 md:mt-52 md:mb-20">
+    <div className="flex flex-col md:flex-row mx-5 md:mx-10 lg:mx-20 md:mt-52 md:mb-20">
       <div className="w-[100%] md:w-[60%] flex flex-col gap-7 justify-center">
         <div className="flex flex-col gap-2 md:gap-5 w-[100%] md:w-[90%]">
           <h1 className="text-purple-500 font-semibold text-center md:text-left">
@@ -52,12 +53,12 @@ const Testimonial = () => {
           alt=""
         />
         <img
-          src={testmonialPortrait}
+          src={testimonialPortrait}
           className="my-10 md:absolute z-10 w-[100%] md:w-[60%] h-[45%] -top-24 -left-16 rounded-lg md:-rotate-3 object-cover object-left img-glow"
           alt=""
         />
         <img
-          src={testmonialBack}
+          src={testimonialBack}
           className="hidden md:block w-[100%] h-[90%] object-cover rounded-lg md:rotate-3 img-glow"
           alt=""
         />

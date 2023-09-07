@@ -52,9 +52,9 @@
 // export default Hero;
 
 import React from "react";
-import map1 from "../../assets/aboutus-map-1.png";
-import map2 from "../../assets/aboutus-map-2.png";
-import bg from "../../assets/bg-about.jpg";
+import map1 from "../../assets/img/aboutus-map-1.png";
+import map2 from "../../assets/img/aboutus-map-2.png";
+import bg from "../../assets/img/bg-about.jpg";
 
 const Hero = ({ heading, textHero }) => {
   return (

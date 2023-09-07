@@ -1,11 +1,11 @@
 import React from "react";
-import welcomeImage from "../../assets/welcome-image.jpg";
-import welcomeArrow from "../../assets/welcome-arrow.png";
+import welcomeImage from "../../assets/img/welcome-image.jpg";
+import welcomeArrow from "../../assets/img/welcome-arrow.png";
 
 const AboutWelcome = () => {
   return (
     <>
-      <div className="my-10 mx-3 md:my-20 lg:mt-60 lg:mb-40 lg:mx-20 relative">
+      <div className="my-10 mx-5 md:my-20 lg:mt-60 lg:mb-40 lg:mx-20 relative">
         <div className="absolute md:left-[50%]">
           <img
             src={welcomeArrow}

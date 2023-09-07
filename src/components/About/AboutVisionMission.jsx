@@ -1,14 +1,14 @@
 import React from "react";
 
-import mapRight from "../../assets/vision-map-right.png";
-import mapLeft from "../../assets/vision-map-left.png";
-import arrowUpper from "../../assets/arrow-Upper.png";
-import arrowLower from "../../assets/arrow-lower.png";
+import mapRight from "../../assets/img/vision-map-right.png";
+import mapLeft from "../../assets/img/vision-map-left.png";
+import arrowUpper from "../../assets/img/arrow-Upper.png";
+import arrowLower from "../../assets/img/arrow-lower.png";
 
 const AboutVisionMission = () => {
   return (
     <div className="">
-      <div className="flex mx-3 flex-col md:flex-row md:mx-10 lg:mx-20 md:my-40 justify-around gap-5">
+      <div className="flex mx-5 flex-col md:flex-row md:mx-10 lg:mx-20 md:my-40 justify-around gap-5">
         <div className="w-[100%] md:[100%]">
           <h3 className="text-purple-500 font-semibold text-center">Vision</h3>
           <h1 className="text-3xl md:text-5xl my-4 mx-2 text-center">

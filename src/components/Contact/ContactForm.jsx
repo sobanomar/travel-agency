@@ -121,12 +121,7 @@ const ContactForm = () => {
               <Grid item xs={12}>
                 <Box mt={2}>
                   <div className="flex">
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      type="submit"
-                      // disabled={formik.isSubmitting}
-                    >
+                    <Button variant="contained" color="primary" type="submit">
                       {formik.isSubmitting ? (
                         <CircularProgress color="inherit" size={"80%"} />
                       ) : formSubmitted ? (
@@ -134,7 +129,6 @@ const ContactForm = () => {
                       ) : (
                         "Send Message"
                       )}
-                      {/* <CircularProgress color="inherit" size={"40%"} /> */}
                     </Button>
                     <p className="text-black font-semibold mx-2 my-1">
                       {formSubmitted

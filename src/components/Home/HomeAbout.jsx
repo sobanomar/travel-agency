@@ -1,7 +1,8 @@
 import React from "react";
-import homeAbout1 from "../../assets/home-about-1.jpg";
-import homeAbout2 from "../../assets/home-about-2.jpg";
-import homeAboutArrow from "../../assets/home-about-arrow.png";
+import homeAbout1 from "../../assets/img/home-about-1.jpg";
+import homeAbout2 from "../../assets/img/home-about-2.jpg";
+import homeAboutArrow from "../../assets/img/home-about-arrow.png";
+
 import { Link } from "react-router-dom";
 
 const HomeAbout = () => {
