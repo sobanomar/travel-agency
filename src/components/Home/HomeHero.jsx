@@ -7,13 +7,13 @@ import getStarted from "../../assets/img/home-hero-get-started.png";
 const HomeHero = () => {
   return (
     <div>
-      <div className="flex h-screen bg-purple-500">
-        <div className="w-[50%] text-white flex justify-center  ">
-          <div className="flex flex-col gap-20 justify-center w-[70%] z-50">
-            <h1 className="text-5xl ">
+      <div className="flex h-screen bg-purple-500 pl-2 sm:p-0">
+        <div className="w-[60%] sm:w-[50%] text-white flex justify-center">
+          <div className="flex flex-col mt-16 gap-5 mx-1 sm:gap-20 justify-center sm:w-[80%] z-50">
+            <h1 className="text-lg sm:text-3xl lg:text-5xl ">
               Find Beautiful Dream Places With Visiting My Friend Travels
             </h1>
-            <p className="text-sm">
+            <p className="text-xs sm:text-sm">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
               dolorum omnis, aliquid rerum nemo quo ad quidem, explicabo officia
               praesentium natus voluptatum non facere earum. Error et quasi
@@ -21,14 +21,17 @@ const HomeHero = () => {
             </p>
           </div>
         </div>
-        <img src={mapHero} className="absolute w-[40%] top-24 left-56 " />
+        <img
+          src={mapHero}
+          className="absolute w-[80%] sm:w-[40%] top-[20%] sm:top-[5%] left-[5%] sm:left-[25%] "
+        />
         <img
           src={getStarted}
-          className="absolute w-[8%] top-[34rem] left-[44.5rem] z-10"
+          className="absolute w-[8%] top-[70%] left-[47.5%] z-10 hidden sm:block"
         />
-        <div className="w-[50%]">
+        <div className="w-[40%] sm:w-[50%] h-[90%] md:h-[120%] overflow-x-hidden flex items-center justify-end sm:justify-center">
           <img
-            className="rotate-3 ml-8 z-0 -mt-5 h-[115%] w-[100%] object-cover rounded-xl img-glow"
+            className="z-0 mt-32 rounded-r-none rounded-l-xl sm:rounded-xl sm:rotate-3 md:ml-12 md:-mt-16 sm:w-[80%] h-[70%] md:h-[95%] md:w-[100%] object-cover sm:img-glow"
             src={homeHero}
           />
         </div>
