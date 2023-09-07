@@ -7,11 +7,15 @@ import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = () => {
   return (
-    <div className="flex mx-20 mt-52 mb-20">
-      <div className="w-[50%] flex flex-col gap-7 justify-end">
-        <div className="flex flex-col gap-5 w-[90%]">
-          <h1>Testimonials</h1>
-          <h1 className="text-7xl">What do they say about us?</h1>
+    <div className="flex flex-col md:flex-row mx-3 md:mx-10 lg:mx-20 md:mt-52 md:mb-20">
+      <div className="w-[100%] md:w-[60%] flex flex-col gap-7 justify-center">
+        <div className="flex flex-col gap-2 md:gap-5 w-[100%] md:w-[90%]">
+          <h1 className="text-purple-500 font-semibold text-center md:text-left">
+            Testimonials
+          </h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl p-2 text-center md:text-left">
+            What do they say about us?
+          </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
             voluptatum, repellendus voluptatibus nihil laudantium in aspernatur
@@ -41,20 +45,20 @@ const Testimonial = () => {
           <h3 className="font-bold text-xl">5/5</h3>
         </div>
       </div>
-      <div className="w-[50%] relative">
+      <div className="w-[100%] md:w-[40%] relative">
         <img
           src={testimonialArrow}
-          className="absolute w-[30rem] right-[42rem] bottom-[35rem] "
+          className="absolute w-[80%] right-[90%] bottom-[90%] hidden md:block"
           alt=""
         />
         <img
           src={testmonialPortrait}
-          className="absolute z-10 w-[22rem] h-[25rem] -top-32 rounded-lg -rotate-3 object-cover object-left  img-glow"
+          className="my-10 md:absolute z-10 w-[100%] md:w-[60%] h-[45%] -top-24 -left-16 rounded-lg md:-rotate-3 object-cover object-left img-glow"
           alt=""
         />
         <img
           src={testmonialBack}
-          className="w-[32rem] h-[45rem] object-cover rounded-lg rotate-3 ml-0 img-glow"
+          className="hidden md:block w-[100%] h-[90%] object-cover rounded-lg md:rotate-3 img-glow"
           alt=""
         />
       </div>

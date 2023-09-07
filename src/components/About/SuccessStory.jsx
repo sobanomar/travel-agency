@@ -1,60 +1,61 @@
 import React from "react";
+
 import successAbout from "../../assets/success-story-img-about.jpg";
 import arrowLeft from "../../assets/success-left-arrow.png";
 import arrowRight from "../../assets/success-right-arrow.png";
 
 const SuccessStory = () => {
   return (
-    <div className="mx-4 md:mx-20 my-8 md:my-40">
-      <div className="text-3xl md:text-5xl font-semibold mb-8">
+    <div className="mx-3 md:mx-10 lg:mx-20 my-10">
+      <div className="text-purple-500 font-semibold text-center md:text-left">
         Success Story
       </div>
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-        <h1 className="text-3xl md:text-5xl w-full md:w-[40%] mb-4 md:mb-0">
-          Success Stories from Visiting My Friend Travels
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl my-4 md:my-0 md:w-[50%] text-center md:text-left">
+          Success Stories from Visting My Friend Travels
         </h1>
-        <p className="text-sm md:text-base w-full md:w-[40%] md:ml-4">
+        <p className="md:w-[50%] lg:w-[40%] ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
           illo deleniti officiis consequuntur officia cupiditate temporibus
           velit. Voluptatibus at possimus officia atque doloremque rerum omnis
           quae molestias deserunt, minus qui.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-between my-8 md:my-20">
-        <div className="w-full md:w-[33.3%] flex flex-col items-center md:items-start gap-4">
-          <div className="text-3xl md:text-5xl">
+      <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-0 lg:my-20 md:my-10">
+        <div className="md:w-[33.3%] flex justify-center md:gap-10 flex-col">
+          <div className="text-3xl text-center md:text-left my-4 md:text-3xl lg:text-5xl">
             <h1>2023</h1>
-            <h1>Became a Big Travel Agency</h1>
+            <h1>Become Big Travel Agency</h1>
           </div>
-          <p className="text-sm md:text-base">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
             accusantium voluptatem doloremque necessitatibus earum tempora
             provident laboriosam reiciendis nostrum in.
           </p>
         </div>
-        <div className="w-full md:w-[33.3%] relative">
+        <div className="md:w-[33.3%] relative md:left-4">
           <img
             src={arrowLeft}
-            className="absolute right-0 md:right-[27rem] w-[50%] md:w-[70%] top-0"
+            className="absolute md:right-[80%] lg:right-[90%] w-[70%] hidden lg:block"
             alt=""
           />
           <img
             src={arrowRight}
-            className="absolute left-0 md:left-80 -top-10 w-[50%] md:w-[70%]"
+            className="absolute left-[80%] -top-[7%] w-[70%] hidden lg:block"
             alt=""
           />
           <img
-            className="rounded-lg w-full h-[20rem] md:h-[100%] object-cover md:rotate-2 shadow-[0px_0px_30px_0px] shadow-purple-600"
+            className="rounded-lg md:w-[85%] w-[100%] h-[25rem] md:h-[100%] object-cover md:rotate-2 img-glow"
             src={successAbout}
             alt=""
           />
         </div>
-        <div className="w-full md:w-[33.3%] flex flex-col items-center md:items-start gap-4">
-          <div className="text-3xl md:text-5xl">
+        <div className="md:w-[33.3%] flex justify-center md:gap-10 flex-col">
+          <div className="text-3xl text-center md:text-left my-4 md:text-3xl lg:text-5xl">
             <h1>2020</h1>
             <h1>Best Services Travel Agency</h1>
           </div>
-          <p className="text-sm md:text-base">
+          <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
             repellendus voluptatem iure temporibus fugit architecto alias
             mollitia eveniet dolorum tempore!

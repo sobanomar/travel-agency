@@ -8,18 +8,20 @@ import arrowLower from "../../assets/arrow-lower.png";
 const AboutVisionMission = () => {
   return (
     <div className="">
-      <div className="flex mx-20 my-32 justify-around ">
-        <div className="w-[35rem]">
-          <h3 className="text-purple-500 font-semibold">Vision</h3>
-          <h1 className="text-5xl my-4 mx-2">Our Vision</h1>
-          <div className="p-4">
-            <p className="p-2">
+      <div className="flex mx-3 flex-col md:flex-row md:mx-10 lg:mx-20 md:my-40 justify-around gap-5">
+        <div className="w-[100%] md:[100%]">
+          <h3 className="text-purple-500 font-semibold text-center">Vision</h3>
+          <h1 className="text-3xl md:text-5xl my-4 mx-2 text-center">
+            Our Vision
+          </h1>
+          <div className="flex flex-col gap-3">
+            <p className="">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
               molestiae maxime cupiditate sed modi quas enim sunt iure dolor
               provident, beatae laborum aliquam, nesciunt libero ad, doloribus
               ipsum culpa distinctio!
             </p>
-            <p className="p-2">
+            <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               minus modi dolorum non deleniti error, at officiis, neque a vitae
               nesciunt, voluptatem earum obcaecati ducimus ipsam voluptatum ut
@@ -27,17 +29,17 @@ const AboutVisionMission = () => {
             </p>
           </div>
         </div>
-        <div className="w-[35rem] mt-40">
-          <h3 className="text-purple-500 font-semibold">Mission</h3>
-          <h1 className="text-5xl my-4 mx-2">Our Mission</h1>
-          <div className="p-2">
-            <p className="p-2">
+        <div className="w-[100%] md:[100%] md:mt-40">
+          <h3 className="text-purple-500 font-semibold text-center">Mission</h3>
+          <h1 className="text-3xl md:text-5xl my-4 text-center">Our Mission</h1>
+          <div className="flex flex-col gap-3">
+            <p className="">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
               molestiae maxime cupiditate sed modi quas enim sunt iure dolor
               provident, beatae laborum aliquam, nesciunt libero ad, doloribus
               ipsum culpa distinctio!
             </p>
-            <p className="p-2">
+            <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               minus modi dolorum non deleniti error, at officiis, neque a vitae
               nesciunt, voluptatem earum obcaecati ducimus ipsam voluptatum ut
@@ -48,22 +50,22 @@ const AboutVisionMission = () => {
       </div>
       <div className="relative">
         <img
-          className="absolute top-[-50rem] left-[60rem] w-[35rem] hidden"
+          className="absolute top-[-40rem] md:top-[-50rem] left-[40%] md:left-[60%] w-[60%] md:w-[40%]"
           src={mapRight}
           alt=""
         />
         <img
-          className="absolute top-[-24rem] w-[27rem] hidden"
+          className="absolute top-[-24rem] w-[60%] md:w-[35%]"
           src={mapLeft}
           alt=""
         />
         <img
-          className="absolute top-[-40rem] left-[30rem] w-[25rem] hidden"
+          className="hidden md:block md:absolute lg:top-[-40rem] lg:left-[40%] md:top-[-45rem] md:left-[45%] w-[30%]"
           src={arrowUpper}
           alt=""
         />
         <img
-          className="absolute top-[-15rem] w-[25rem] left-[25rem] hidden"
+          className="hidden md:block md:absolute lg:top-[-14rem] lg:left-[30%] md:top-[-13rem] md:left-[30%] w-[30%]"
           src={arrowLower}
           alt=""
         />
