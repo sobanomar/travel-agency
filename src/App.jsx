@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact/Contact";
 import Gallery from "./components/Gallery/Gallery";
+import Destination from "./components/Destination/Destination";
 
 const AppLayout = () => {
   return (
@@ -38,6 +39,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />,
+      },
+      {
+        path: "/destination",
+        element: <Destination />,
       },
     ],
   },

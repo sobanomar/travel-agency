@@ -14,7 +14,7 @@ const Home = () => {
       <HomeAbout />
       <HomeWhyChooseUs />
       <HomePopularDestinations />
-      <HomePackage />
+      {/* <HomePackage /> */}
       <HomeGallery />
       <Testimonial />
     </>

@@ -15,7 +15,7 @@ const BestPackage = () => {
         <img className="absolute left-[60%] w-[40%]" src={mapRight} alt="" />
       </div>
       <div className="flex justify-center">
-        <div className="absolute text-white flex flex-col text-center items-center sm:w-[70%] ">
+        <div className="z-10 absolute text-white flex flex-col text-center items-center sm:w-[70%] ">
           <h1 className="text-2xl mt-16 sm:mt-28 sm:text-3xl md:text-5xl lg:text-6xl ">
             Best Holiday package For You
           </h1>
@@ -30,10 +30,10 @@ const BestPackage = () => {
         </div>
       </div>
 
-      <div className="z-1 h-full">
+      <div className=" h-full">
         <img
           src={bestPackage}
-          className="h-full w-full object-cover object-center"
+          className=" h-full w-full object-cover object-center brightness-50 z-0 "
         />
       </div>
     </div>

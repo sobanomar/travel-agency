@@ -8,69 +8,73 @@ const HomeWhyChooseUs = () => {
   return (
     // why choose us section?
     <>
-      <div className=" text-white flex flex-col my-40 relative">
-        <img className="absolute -z-10" src={whyChooseUsBackground} />
-        <div className="flex justify-between mx-20 my-20">
-          <div className="flex flex-col items-center">
-            <img src={whyGlobe} />
-            <h1 className="text-4xl mt-8 mb-5">Experienced Guide</h1>
-            <p className="text-sm w-[50%] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-              beatae fugiat sit iusto voluptate totam excepturi sed eius
-              molestias, reprehenderit numquam iure aut non sint officiis quod
-              consequatur laboriosam deleniti id enim dolorem illo. Ipsa. Lorem,
-              ipsum.
-            </p>
+      <div className=" text-white flex flex-col justify-between sm:justify-around relative h-screen">
+        <img
+          className="absolute w-full h-full object-cover -z-10"
+          src={whyChooseUsBackground}
+        />
+        <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
+          <div className="w-[50%] flex justify-start">
+            <div className="md:w-[65%] flex flex-col items-center">
+              <img className="w-[6rem]" src={whyGlobe} />
+              <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
+                Experienced Guide
+              </h1>
+              <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                beatae fugiat sit iusto voluptate totam excepturi sed eius
+                molestias, reprehenderit numquam iure aut non sint officiis quod
+                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
+                Lorem, ipsum.
+              </p>
+            </div>
           </div>
-
-          <div className="flex flex-col items-center">
-            <img src={whyPlane} />
-            <h1 className="text-4xl mt-8 mb-5">Affordable Price</h1>
-            <p className="text-sm w-[50%] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-              beatae fugiat sit iusto voluptate totam excepturi sed eius
-              molestias, reprehenderit numquam iure aut non sint officiis quod
-              consequatur laboriosam deleniti id enim dolorem illo. Ipsa. Lorem,
-              ipsum.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex justify-center opacity-0">
-          <div
-            className=" text-black rounded-full bg-white flex flex-col items-center "
-            style={{ height: "400px", width: "400px" }}
-          >
-            <h1 className="text-lg  mt-16">Why?</h1>
-            <h1 className="text-5xl w-[70%] text-center mt-10">
-              Why <br /> choose us?
-            </h1>
+          <div className="w-[50%] flex justify-end">
+            <div className="md:w-[65%] flex flex-col items-center">
+              <img className="w-[4.8rem]" src={whyPlane} />
+              <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
+                Affordable Price
+              </h1>
+              <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                beatae fugiat sit iusto voluptate totam excepturi sed eius
+                molestias, reprehenderit numquam iure aut non sint officiis quod
+                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
+                Lorem, ipsum.
+              </p>
+            </div>
           </div>
         </div>
-
-        <div className="flex justify-between mx-20 my-20">
-          <div className="flex flex-col items-center">
-            <img src={whyList} />
-            <h1 className="text-4xl mt-8 mb-5">Great Support</h1>
-            <p className="text-sm w-[50%] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-              beatae fugiat sit iusto voluptate totam excepturi sed eius
-              molestias, reprehenderit numquam iure aut non sint officiis quod
-              consequatur laboriosam deleniti id enim dolorem illo. Ipsa. Lorem,
-              ipsum.
-            </p>
+        <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
+          <div className="w-[50%] flex justify-start">
+            <div className="md:w-[65%] flex flex-col items-center">
+              <img className="w-[6rem]" src={whyHotel} />
+              <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
+                Luxurious Hotel
+              </h1>
+              <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                beatae fugiat sit iusto voluptate totam excepturi sed eius
+                molestias, reprehenderit numquam iure aut non sint officiis quod
+                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
+                Lorem, ipsum.
+              </p>
+            </div>
           </div>
-
-          <div className="flex flex-col items-center">
-            <img src={whyHotel} />
-            <h1 className="text-4xl mt-8 mb-5">Luxurious Hotel</h1>
-            <p className="text-sm w-[50%] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-              beatae fugiat sit iusto voluptate totam excepturi sed eius
-              molestias, reprehenderit numquam iure aut non sint officiis quod
-              consequatur laboriosam deleniti id enim dolorem illo. Ipsa. Lorem,
-              ipsum.
-            </p>
+          <div className="w-[50%] flex justify-end">
+            <div className="md:w-[65%] flex flex-col items-center">
+              <img className="w-[6rem]" src={whyGlobe} />
+              <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
+                Experienced Guide
+              </h1>
+              <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                beatae fugiat sit iusto voluptate totam excepturi sed eius
+                molestias, reprehenderit numquam iure aut non sint officiis quod
+                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
+                Lorem, ipsum.
+              </p>
+            </div>
           </div>
         </div>
       </div>

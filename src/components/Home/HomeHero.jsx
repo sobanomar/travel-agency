@@ -31,7 +31,7 @@ const HomeHero = () => {
         />
         <div className="w-[40%] sm:w-[50%] h-[90%] md:h-[120%] overflow-x-hidden flex items-center justify-end sm:justify-center">
           <img
-            className="z-0 mt-32 rounded-r-none rounded-l-xl sm:rounded-xl sm:rotate-3 md:ml-12 md:-mt-16 sm:w-[80%] h-[70%] md:h-[95%] md:w-[100%] object-cover sm:img-glow"
+            className="z-0 mt-32 rounded-r-none rounded-l-xl sm:rounded-xl sm:rotate-3 md:ml-12 md:-mt-16 sm:w-[80%] h-[70%] md:h-[95%] md:w-[100%] object-cover"
             src={homeHero}
           />
         </div>
