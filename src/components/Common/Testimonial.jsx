@@ -8,7 +8,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col mt-5 md:flex-row mx-5 md:mx-10 lg:mx-20 md:my-10 md:mt-40 lg:mt-60">
+    <div className="flex flex-col mt-5 md:flex-row mx-5 md:mx-10 lg:mx-20 md:my-10 md:mt-32 lg:mt-52">
       <div className="w-[100%] md:w-[60%] flex flex-col gap-7 justify-center">
         <div className="flex flex-col gap-2 md:gap-5 w-[100%] md:w-[90%]">
           <h1 className="text-purple-500 font-semibold text-center md:text-left">

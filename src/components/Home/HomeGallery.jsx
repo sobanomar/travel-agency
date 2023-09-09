@@ -88,7 +88,7 @@ const GallerySection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col-reverse md:flex-row mx-5 md:mx-10 lg:mx-20 my-10 md:my-20 md:h-screen">
+    <div className="flex flex-col-reverse md:flex-row mx-5 md:mx-10 lg:mx-20 my-10 sm:my-20 md:h-screen">
       {Images && (
         <>
           <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 my-8 md:hidden">
@@ -142,7 +142,7 @@ const GallerySection = () => {
           </div>
           <div className="flex flex-col justify-center md:w-[40%] md:px-5 lg:px-7 xl:px-10 items-center md:items-start">
             <h1 className="text-lg text-purple-600 font-semibold">Gallery</h1>
-            <h1 className="text-3xl text-center md:text-left xl:text-5xl my-2 lg:my-4">
+            <h1 className="text-2xl text-center md:text-left xl:text-5xl my-2 lg:my-4">
               Moments Captured By Connoisseurs Of Beauty
             </h1>
             <div className="my-4">
