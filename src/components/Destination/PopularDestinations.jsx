@@ -132,3 +132,19 @@ const PopularDestinations = () => {
 };
 
 export default PopularDestinations;
+
+<span className="flex gap-10">
+  <div className="flex h-[50%] mt-5">
+    <img src={filledStar} />
+    <img src={filledStar} />
+    <img src={filledStar} />
+    <img src={filledStar} />
+    <img src={hollowStar} className="h-[50%]" />
+  </div>
+  <p className="mx-2 font-serif mt-5  flex flex-col">
+    <span className="text-md  line-through">$225,99</span>
+    <span className="text-lg font-bold ">
+      $185,99<span className="text-md font-normal">/day</span>
+    </span>
+  </p>
+</span>;
