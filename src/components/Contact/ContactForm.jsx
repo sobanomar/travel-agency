@@ -85,9 +85,6 @@ const ContactForm = () => {
     <Container className="m-20">
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          {/* <Typography variant="h2" gutterBottom sx={{ fontWeight: 400 }}>
-            Get In Touch
-          </Typography> */}
           <div className="text-4xl font-semibold md:text-5xl mb-10">
             Get In Touch
           </div>

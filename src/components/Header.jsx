@@ -10,7 +10,7 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="bg-gradient-to-b from-black text-white absolute w-full z-50">
+    <div className="bg-gradient-to-b from-black text-white fixed w-full z-50">
       <div className="flex justify-between md:mx-8 lg:mx-20 py-8 mx-5  md:px-0">
         <div className="text-xl">
           <h1 className="md:text-xl lg:text-3xl text-[16px]">
@@ -24,8 +24,8 @@ const Header = () => {
           <Link to="/about" className="hover:text-purple-400">
             About
           </Link>
-          <Link to="/destination" className="hover:text-purple-400">
-            Destination
+          <Link to="/destinations" className="hover:text-purple-400">
+            Destinations
           </Link>
           <Link to="/gallery" className="hover:text-purple-400">
             Our Gallery

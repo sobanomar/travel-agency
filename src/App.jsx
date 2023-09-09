@@ -1,5 +1,9 @@
 import React from "react";
-import { Outlet, createBrowserRouter } from "react-router-dom";
+import {
+  Outlet,
+  createBrowserRouter,
+  ScrollRestoration,
+} from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
@@ -8,13 +12,18 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact/Contact";
 import Gallery from "./components/Gallery/Gallery";
 import Destination from "./components/Destination/Destination";
+import DestinationDetails from "./components/SingleDestination/DestinationDetails";
+import SingleDestination from "./components/SingleDestination/SingleDestination";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const AppLayout = () => {
   return (
     <div>
-      <Header />
-      <Outlet />
-      <Footer />
+      <ScrollToTop>
+        <Header />
+        <Outlet />
+        <Footer />
+      </ScrollToTop>
     </div>
   );
 };
@@ -41,8 +50,12 @@ export const appRouter = createBrowserRouter([
         element: <Gallery />,
       },
       {
-        path: "/destination",
+        path: "/destinations",
         element: <Destination />,
+      },
+      {
+        path: "/destination/:desId",
+        element: <SingleDestination />,
       },
     ],
   },
