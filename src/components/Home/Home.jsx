@@ -21,8 +21,8 @@ const Home = () => {
     <>
       <HomeHero />
       <HomeAbout />
-      <HomeWhyChooseUs />
       <HomePopularDestinations destinations={homeData?.destination} />
+      <HomeWhyChooseUs />
       <HomePackage />
       <HomeGallery />
       <Testimonial />

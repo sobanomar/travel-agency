@@ -80,7 +80,7 @@ const GallerySection = () => {
           </div>
 
           <div className="flex flex-col space-y-4 w-full lg:w-1/3">
-            <div className="relative w-full h-[33%] lg:h-full">
+            <div className="relative w  -full h-[33%] lg:h-full">
               <img
                 className="object-cover h-full w-full"
                 src={Images[4].image}

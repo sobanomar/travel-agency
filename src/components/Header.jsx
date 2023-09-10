@@ -61,7 +61,7 @@ const Header = () => {
               About
             </Link>
             <Link
-              to="/destination"
+              to="/destinations"
               onClick={toggleMenu}
               className="block hover:text-gray-400"
             >
