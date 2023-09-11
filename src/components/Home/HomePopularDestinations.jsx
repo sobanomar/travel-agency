@@ -29,7 +29,7 @@ const DestinationsPopularDestinations = ({ destinations }) => {
           </div>
         </div>
 
-        <div className="flex gap-10 md:gap-0 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
+        <div className="flex gap-10 md:gap-10 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
           <div className="md:w-[30%]">
             <div className="w-[100%]">
               <img
@@ -59,7 +59,7 @@ const DestinationsPopularDestinations = ({ destinations }) => {
                 </p>
               </span>
               <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[80%] xl:w-[75%]">
+                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
                   {destinations[0]?.description}
                 </p>
               </div>
@@ -100,7 +100,7 @@ const DestinationsPopularDestinations = ({ destinations }) => {
                 </p>
               </span>
               <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[80%] xl:w-[75%]">
+                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
                   {destinations[1]?.description}
                 </p>
               </div>

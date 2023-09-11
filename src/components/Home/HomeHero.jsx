@@ -7,7 +7,7 @@ import getStarted from "../../assets/img/home-hero-get-started.png";
 const HomeHero = () => {
   return (
     <div>
-      <div className="flex h-screen bg-purple-500 pl-2 sm:p-0">
+      <div className="flex h-screen bg-purple-500 pl-5 sm:p-0">
         <div className="w-[60%] sm:w-[50%] text-white flex justify-center">
           <div className="flex flex-col mt-16 gap-5 mx-1 sm:gap-20 justify-center sm:w-[80%] z-10">
             <h1 className="text-lg sm:text-3xl lg:text-5xl ">

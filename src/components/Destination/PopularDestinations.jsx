@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import pic1 from "../../assets/img/home-popular-des-1.jpg";
 import pic2 from "../../assets/img/home-popular-des-2.jpg";
 import pic3 from "../../assets/img/home-popular-des-3.jpg";
@@ -8,7 +8,6 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { Rating } from "@mui/material";
 const PopularDestinations = ({ destinations }) => {
-  console.log(destinations);
   return (
     destinations && (
       <div className="mx-5 md:mx-10 lg:mx-20 my-10 md:my-20">
@@ -21,7 +20,7 @@ const PopularDestinations = ({ destinations }) => {
           </h1>
           <div>
             <Link
-              to={"/destination"}
+              to={"/destinations"}
               className="text-sm hidden md:block text-purple-600 font-semibold cursor-pointer"
             >
               <span className="m-1">See more</span>
@@ -30,12 +29,12 @@ const PopularDestinations = ({ destinations }) => {
           </div>
         </div>
 
-        <div className="flex md:h-[45rem] gap-10 md:gap-0 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
+        <div className="flex gap-10 md:gap-10 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[60%]">
+            <div className="w-[100%]">
               <img
                 src={destinations[0]?.images}
-                className="rounded-3xl h-[20rem] md:h-[100%] w-[100%] object-cover img-glow md:rotate-2"
+                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:rotate-2"
               />
             </div>
             <div className="flex flex-col items-center my-4">
@@ -60,7 +59,7 @@ const PopularDestinations = ({ destinations }) => {
                 </p>
               </span>
               <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[80%] xl:w-[75%]">
+                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
                   {destinations[0]?.description}
                 </p>
               </div>
@@ -73,10 +72,10 @@ const PopularDestinations = ({ destinations }) => {
             </div>
           </div>
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[60%]">
+            <div className="w-[100%]">
               <img
                 src={destinations[1]?.images}
-                className="rounded-3xl h-[20rem] md:h-[100%] w-[100%] object-cover img-glow md:-rotate-2"
+                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:-rotate-2"
               />
             </div>
             <div className="flex flex-col items-center my-4">
@@ -101,7 +100,7 @@ const PopularDestinations = ({ destinations }) => {
                 </p>
               </span>
               <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[80%] xl:w-[75%]">
+                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
                   {destinations[1]?.description}
                 </p>
               </div>
@@ -114,12 +113,12 @@ const PopularDestinations = ({ destinations }) => {
             </div>
           </div>
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[20rem] md:h-[60%] bg-purple-700 rounded-3xl text-2xl font-semibold text-white img-glow items-center flex justify-center">
+            <div className="w-[100%] h-[20rem] md:h-[25rem] bg-purple-700 rounded-3xl text-3xl font-semibold text-white img-glow items-center flex justify-center">
               Coming Soon
             </div>
             <div className="flex flex-col items-center my-4">
               <h1 className="font-bold my-2 md:my-4 text-2xl md:text-xl lg:text-2xl xl:text-3xl">
-                COMING SOON
+                Coming Soon
               </h1>
             </div>
           </div>
