@@ -15,64 +15,56 @@ const HomeWhyChooseUs = () => {
         />
         <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
           <div className="w-[50%] flex justify-start">
-            <div className="md:w-[65%] flex flex-col items-center">
+            <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyGlobe} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
                 Experienced Guide
               </h1>
               <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                beatae fugiat sit iusto voluptate totam excepturi sed eius
-                molestias, reprehenderit numquam iure aut non sint officiis quod
-                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
-                Lorem, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                saepe dolores laborum ut iusto exercitationem omnis repellendus
+                quasi eveniet neque.
               </p>
             </div>
           </div>
           <div className="w-[50%] flex justify-end">
-            <div className="md:w-[65%] flex flex-col items-center">
+            <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[4.8rem]" src={whyPlane} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
                 Affordable Price
               </h1>
               <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                beatae fugiat sit iusto voluptate totam excepturi sed eius
-                molestias, reprehenderit numquam iure aut non sint officiis quod
-                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
-                Lorem, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                saepe dolores laborum ut iusto exercitationem omnis repellendus
+                quasi eveniet neque.
               </p>
             </div>
           </div>
         </div>
         <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
           <div className="w-[50%] flex justify-start">
-            <div className="md:w-[65%] flex flex-col items-center">
+            <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyHotel} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
                 Luxurious Hotel
               </h1>
               <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                beatae fugiat sit iusto voluptate totam excepturi sed eius
-                molestias, reprehenderit numquam iure aut non sint officiis quod
-                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
-                Lorem, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                saepe dolores laborum ut iusto exercitationem omnis repellendus
+                quasi eveniet neque.
               </p>
             </div>
           </div>
           <div className="w-[50%] flex justify-end">
-            <div className="md:w-[65%] flex flex-col items-center">
+            <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyGlobe} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
                 Experienced Guide
               </h1>
               <p className="text-xs xl:text-sm w-[100%] text-justify hidden md:block">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                beatae fugiat sit iusto voluptate totam excepturi sed eius
-                molestias, reprehenderit numquam iure aut non sint officiis quod
-                consequatur laboriosam deleniti id enim dolorem illo. Ipsa.
-                Lorem, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                saepe dolores laborum ut iusto exercitationem omnis repellendus
+                quasi eveniet neque.
               </p>
             </div>
           </div>

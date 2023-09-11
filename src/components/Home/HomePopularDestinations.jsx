@@ -29,12 +29,12 @@ const DestinationsPopularDestinations = ({ destinations }) => {
           </div>
         </div>
 
-        <div className="flex md:h-[45rem] gap-10 md:gap-0 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
+        <div className="flex gap-10 md:gap-0 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[60%]">
+            <div className="w-[100%]">
               <img
                 src={destinations[0]?.images}
-                className="rounded-3xl h-[20rem] md:h-[100%] w-[100%] object-cover img-glow md:rotate-2"
+                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:rotate-2"
               />
             </div>
             <div className="flex flex-col items-center my-4">
@@ -72,10 +72,10 @@ const DestinationsPopularDestinations = ({ destinations }) => {
             </div>
           </div>
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[60%]">
+            <div className="w-[100%]">
               <img
                 src={destinations[1]?.images}
-                className="rounded-3xl h-[20rem] md:h-[100%] w-[100%] object-cover img-glow md:-rotate-2"
+                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:-rotate-2"
               />
             </div>
             <div className="flex flex-col items-center my-4">
@@ -113,7 +113,7 @@ const DestinationsPopularDestinations = ({ destinations }) => {
             </div>
           </div>
           <div className="md:w-[30%]">
-            <div className="w-[100%] h-[60%] bg-purple-700 rounded-3xl text-4xl font-semibold text-white img-glow items-center flex justify-center">
+            <div className="w-[100%] h-[20rem] md:h-[25rem] bg-purple-700 rounded-3xl text-3xl font-semibold text-white img-glow items-center flex justify-center">
               Coming Soon
             </div>
             <div className="flex flex-col items-center my-4">
