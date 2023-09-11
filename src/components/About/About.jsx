@@ -13,7 +13,7 @@ const About = () => {
   useEffect(() => {
     async function getData() {
       const response = await fetch(
-        "http://35.173.181.194:8000/aboutus/founder/message"
+        "http://35.173.181.194:8000/aboutus/founder/message/"
       );
       const founderMessage = await response.json();
       setFounderMessage(founderMessage?.results);

@@ -10,7 +10,7 @@ const Destination = () => {
   useEffect(() => {
     async function getData() {
       const response = await fetch(
-        "http://35.173.181.194:8000/destination/list"
+        "http://35.173.181.194:8000/destination/list/"
       );
       const data = await response.json();
       setDestinationsData(data);

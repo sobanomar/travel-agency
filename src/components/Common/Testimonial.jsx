@@ -12,7 +12,9 @@ const Testimonial = () => {
 
   useEffect(() => {
     async function getTestimonials() {
-      const response = await fetch("http://35.173.181.194:8000/users/feedback");
+      const response = await fetch(
+        "http://35.173.181.194:8000/users/feedback/"
+      );
       const feedback = await response.json();
       const results = feedback?.results;
 

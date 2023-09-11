@@ -11,7 +11,7 @@ const Home = () => {
   const [homeData, setHomeData] = useState(null);
   useEffect(() => {
     async function getData() {
-      const response = await fetch("http://35.173.181.194:8000/home");
+      const response = await fetch("http://35.173.181.194:8000/home/");
       const data = await response.json();
       setHomeData(data);
     }
