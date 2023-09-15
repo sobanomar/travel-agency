@@ -24,7 +24,7 @@ const Home = () => {
       <HomeAbout />
       <HomePopularDestinations destinations={homeData?.destination} />
       <HomeWhyChooseUs />
-      <HomePackage />
+      <HomePackage destinations={homeData?.destination} />
       <HomeGallery />
       <Testimonial />
     </>

@@ -26,7 +26,7 @@ const PopularDestinations = ({ destinations }) => {
 
         <div className="w-full flex flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row flex-wrap">
           {destinations.map((destination) => (
-            <DestinationCard destination={destination} />
+            <DestinationCard key={destination.id} destination={destination} />
           ))}
           {/*
           <div className="md:w-[30%]">

@@ -38,14 +38,14 @@ const DestinationCard = ({ destination }) => {
               ? destination.description.substring(0, 180) + "..."
               : destination.description}
           </p>
-          <span
+          {/* <span
             onClick={() => {
               setIsSeeMore(!isSeeMore);
             }}
             className="underline text-purple-700 italic cursor-pointer text-start"
           >
             {!isSeeMore ? "see more" : "see less"}
-          </span>
+          </span> */}
         </div>
         <Link
           to={`/destination/${destination.id}`}

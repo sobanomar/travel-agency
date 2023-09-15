@@ -54,9 +54,8 @@
 import React from "react";
 import map1 from "../../assets/img/aboutus-map-1.png";
 import map2 from "../../assets/img/aboutus-map-2.png";
-import bg from "../../assets/img/bg-about.jpg";
 
-const Hero = ({ heading, textHero }) => {
+const Hero = ({ heading, textHero, bgImg }) => {
   return (
     <div className="w-full h-[30rem] md:h-[100%] lg:h-[44.3rem] overflow-hidden  ">
       <div className="flex justify-center">
@@ -73,7 +72,7 @@ const Hero = ({ heading, textHero }) => {
         <img src={map2} className="absolute w-1/3 top-72 " />
       </div>
       <img
-        src={bg}
+        src={bgImg}
         className="m-0 w-full h-full object-cover brightness-50 z-0"
       />
     </div>

@@ -13,8 +13,35 @@ const Header = () => {
     <div className="bg-gradient-to-b from-black text-white fixed w-full z-50">
       <div className="flex justify-between md:mx-8 lg:mx-20 py-8 mx-5  md:px-0">
         <div className="text-xl">
-          <h1 className="md:text-xl lg:text-3xl text-[16px]">
-            VISITING MY FRIEND TRAVELS
+          <h1 className="font-semibold md:text-xl lg:text-3xl text-[16px] header-name-text">
+            <div className="rainbow-text">
+              {/* <span class="violet">V</span>
+              <span class="indigo">I</span>
+              <span class="blue">S</span>
+              <span class="green">I</span>
+              <span class="yellow">T</span>
+              <span class="orange">I</span>
+              <span class="red">N</span>
+              <span>G</span>
+              <span class="violet">M</span>
+              <span class="indigo">Y</span>
+              <span class="blue"> </span>
+              <span class="green">F</span>
+              <span class="yellow">R</span>
+              <span class="orange">I</span>
+              <span class="red">E</span>
+              <span class="violet">N</span>
+              <span class="indigo">D</span>
+              <span class="blue"> </span>
+              <span class="green">T</span>
+              <span class="yellow">R</span>
+              <span class="orange">A</span>
+              <span class="red">V</span>
+              <span class="violet">E</span>
+              <span class="indigo">L</span>
+              <span class="blue">S</span> */}
+              VISITING MY FRIEND TRAVELS
+            </div>
           </h1>
         </div>
         <div className="hidden md:flex space-x-4">

@@ -6,6 +6,7 @@ import DestinationTourGuides from "./DestinationTourGuide";
 import { useParams } from "react-router-dom";
 import BestPackage from "../Common/BestPackage";
 import Testimonial from "../Common/Testimonial";
+import singleDestinationBgImg from "../../assets/img/single_destination_hero.jpg";
 
 const SingleDestination = () => {
   const [destinationDetail, setDestinationDetail] = useState(null);
@@ -27,7 +28,11 @@ const SingleDestination = () => {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore amet vitae aliquid maiores non aliquam deserunt consequuntur esse rerum!";
   return (
     <>
-      <Hero heading={"Single Destination"} textHero={description} />
+      <Hero
+        heading={"Single Destination"}
+        textHero={description}
+        bgImg={singleDestinationBgImg}
+      />
       <DestinationDetails destination={destinationDetail} />
       <DestinationMap />
       <DestinationTourGuides />

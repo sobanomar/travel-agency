@@ -3,20 +3,18 @@ import footerMap from "../assets/img/footer-map.png";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
+
+import FacebookIcon from "../assets/socials/facebook_icon.png";
+import InstagramIcon from "../assets/socials/instagram_icon.png";
+import TwitterIcon from "../assets/socials/twitter_icon.png";
+import LinkedInIcon from "../assets/socials/linkedin_icon.png";
 
 const Footer = () => {
   return (
     <div className="w-full bg-purple-600 ">
-      <img
-        className="hidden md:block absolute w-[60%] "
-        src={footerMap}
-        alt=""
-      />
-      <div className="text-white mx-5 md:mx-10 lg:mx-20">
+      <img className="hidden absolute w-[60%]" src={footerMap} alt="" />
+
+      <div className="text-white mx-5 md:mx-10 lg:mx-20 z-10">
         <div className="py-4">
           <div className="flex justify-around flex-col md:flex-row">
             <div className=" md:w-[24%] flex md:justify-center">
@@ -28,20 +26,6 @@ const Footer = () => {
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Temporibus, autem!
                 </p>
-                <div className="my-2">
-                  <a className="m-1" style={{ color: "blue" }}>
-                    <FacebookIcon className="" />
-                  </a>
-                  <a className="m-1" style={{ color: "lightblue" }}>
-                    <TwitterIcon />
-                  </a>
-                  <a className="m-1" style={{ color: "darkblue" }}>
-                    <LinkedInIcon />
-                  </a>
-                  <a className="m-1" style={{ color: "rgb(225 48 108)" }}>
-                    <InstagramIcon />
-                  </a>
-                </div>
               </div>
             </div>
             <div className=" md:w-[14%] flex md:justify-center">
@@ -55,9 +39,25 @@ const Footer = () => {
             </div>
             <div className=" md:w-[14%] flex md:justify-center">
               <div>
-                <div className="text-xl font-semibold my-4">Links</div>
-                <p className="my-1 font-thin">Terms of use</p>
-                <p className="my-1 font-thin">Privacy Policy</p>
+                <div className="text-xl font-semibold my-4">Socials</div>
+                <div className="my-2 font-thin text-md">
+                  <a className="flex my-2 cursor-pointer">
+                    <img className="w-6" src={InstagramIcon} />
+                    <p className="mx-2 hover:text-pink-400">Instagram</p>
+                  </a>
+                  <a className="flex my-2 cursor-pointer">
+                    <img className="w-6" src={FacebookIcon} />
+                    <p className="mx-2 hover:text-blue-500">Facebook</p>
+                  </a>
+                  <a className="flex my-2 cursor-pointer">
+                    <img className="w-6" src={TwitterIcon} />
+                    <p className="mx-2 hover:text-blue-300">Twitter</p>
+                  </a>
+                  <a className="flex my-2 cursor-pointer">
+                    <img className="w-6" src={LinkedInIcon} />
+                    <p className="mx-2 hover:text-blue-400">LinkedIn</p>
+                  </a>
+                </div>
               </div>
             </div>
             <div className=" md:w-[24%] flex md:justify-center">
