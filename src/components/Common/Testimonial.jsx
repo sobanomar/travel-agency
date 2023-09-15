@@ -51,7 +51,7 @@ const Testimonial = () => {
         <div className="w-[100%] md:w-[40%] relative">
           <img
             src={testimonialArrow}
-            className="absolute w-[80%] right-[90%] bottom-[90%] hidden md:block"
+            className="absolute w-[80%] right-[90%] bottom-[87%] lg:bottom-[85%] hidden md:block"
             alt=""
           />
           <img

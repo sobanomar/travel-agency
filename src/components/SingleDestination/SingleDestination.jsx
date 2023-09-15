@@ -4,6 +4,8 @@ import DestinationDetails from "./DestinationDetails";
 import DestinationMap from "./DestinationMap";
 import DestinationTourGuides from "./DestinationTourGuide";
 import { useParams } from "react-router-dom";
+import BestPackage from "../Common/BestPackage";
+import Testimonial from "../Common/Testimonial";
 
 const SingleDestination = () => {
   const [destinationDetail, setDestinationDetail] = useState(null);
@@ -29,6 +31,8 @@ const SingleDestination = () => {
       <DestinationDetails destination={destinationDetail} />
       <DestinationMap />
       <DestinationTourGuides />
+      <BestPackage />
+      <Testimonial />
     </>
   );
 };

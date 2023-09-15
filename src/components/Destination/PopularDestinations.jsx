@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
-import pic1 from "../../assets/img/home-popular-des-1.jpg";
-import pic2 from "../../assets/img/home-popular-des-2.jpg";
-import pic3 from "../../assets/img/home-popular-des-3.jpg";
-import filledStar from "../../assets/img/home-popular-des-filledStar.png";
-import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
+import React from "react";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
-import { Rating } from "@mui/material";
+import DestinationCard from "../Common/DestinationCard";
 const PopularDestinations = ({ destinations }) => {
   return (
     destinations && (
@@ -18,7 +13,7 @@ const PopularDestinations = ({ destinations }) => {
           <h1 className="text-3xl my-4 w-[100%] md:w-[80%] text-center md:text-4xl lg:text-5xl lg:text-left lg:w-[60%] xl:text-6xl">
             Popular Destination Of This Year For You{" "}
           </h1>
-          <div>
+          {/* <div>
             <Link
               to={"/destinations"}
               className="text-sm hidden md:block text-purple-600 font-semibold cursor-pointer"
@@ -26,92 +21,14 @@ const PopularDestinations = ({ destinations }) => {
               <span className="m-1">See more</span>
               <ArrowForward className="mb-0.5" />
             </Link>
-          </div>
+          </div> */}
         </div>
 
-        <div className="flex gap-10 md:gap-10 flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row">
-          <div className="md:w-[30%]">
-            <div className="w-[100%]">
-              <img
-                src={destinations[0]?.images}
-                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:rotate-2"
-              />
-            </div>
-            <div className="flex flex-col items-center my-4">
-              <h1 className="font-bold my-2 md:my-4 text-2xl md:text-xl lg:text-2xl xl:text-3xl">
-                {destinations[0]?.name}
-              </h1>
-              <span className="flex flex-col xl:flex-row">
-                <div className="flex">
-                  <Rating
-                    name="read-only"
-                    value={Number(destinations[0]?.rating)}
-                    precision={0.1}
-                    readOnly
-                  />
-                </div>
-                <p className="font-serif flex">
-                  {Number(destinations[0]?.rating)}{" "}
-                  <span className="font-bold ml-2">
-                    {Number(destinations[0]?.price)}
-                  </span>
-                  /day
-                </p>
-              </span>
-              <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
-                  {destinations[0]?.description}
-                </p>
-              </div>
-              <Link
-                to={`/destination/${destinations[0]?.id}`}
-                className="text-white bg-purple-600 text-lg px-8 rounded-full py-2"
-              >
-                See detail
-              </Link>
-            </div>
-          </div>
-          <div className="md:w-[30%]">
-            <div className="w-[100%]">
-              <img
-                src={destinations[1]?.images}
-                className="rounded-3xl h-[20rem] md:h-[25rem] w-[100%] object-cover img-glow md:-rotate-2"
-              />
-            </div>
-            <div className="flex flex-col items-center my-4">
-              <h1 className="font-bold my-2 md:my-4 text-2xl md:text-xl lg:text-2xl xl:text-3xl">
-                {destinations[1]?.name}
-              </h1>
-              <span className="flex flex-col xl:flex-row">
-                <div className="flex">
-                  <Rating
-                    name="read-only"
-                    value={Number(destinations[1]?.rating)}
-                    precision={0.1}
-                    readOnly
-                  />
-                </div>
-                <p className="font-serif flex">
-                  {Number(destinations[1]?.rating)}{" "}
-                  <span className="font-bold ml-2">
-                    {Number(destinations[1]?.price)}
-                  </span>
-                  /day
-                </p>
-              </span>
-              <div className="my-4 flex justify-center">
-                <p className="text-sm w-[90%] sm:w-[90%] xl:w-[75%]">
-                  {destinations[1]?.description}
-                </p>
-              </div>
-              <Link
-                to={`/destination/${destinations[1]?.id}`}
-                className="text-white bg-purple-600 text-lg px-8 rounded-full py-2"
-              >
-                See detail
-              </Link>
-            </div>
-          </div>
+        <div className="w-full flex flex-col justify-between my-4 md:my-10 lg:my-16 md:flex-row flex-wrap">
+          {destinations.map((destination) => (
+            <DestinationCard destination={destination} />
+          ))}
+          {/*
           <div className="md:w-[30%]">
             <div className="w-[100%] h-[20rem] md:h-[25rem] bg-purple-700 rounded-3xl text-3xl font-semibold text-white img-glow items-center flex justify-center">
               Coming Soon
@@ -121,7 +38,7 @@ const PopularDestinations = ({ destinations }) => {
                 Coming Soon
               </h1>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )

@@ -25,7 +25,6 @@ const Destination = () => {
       <Hero heading="Destinations" textHero={textHero} />
       <PopularDestinations destinations={destinationsData?.results} />
       <RecommendedDestinations />
-      <BestPackage />
       <Testimonial />
     </>
   );

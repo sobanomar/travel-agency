@@ -5,6 +5,7 @@ import filledStar from "../../assets/img/home-popular-des-filledStar.png";
 import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
 
 import ArrowForward from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
 
 const HomePackage = () => {
   return (
@@ -17,7 +18,9 @@ const HomePackage = () => {
           We Provide A Choice Of Packages Suitable For You
         </h1>
         <h1 className="text-sm text-center mt-4  text-purple-600 font-semibold cursor-pointer">
-          <span className="m-1">See more</span>
+          <Link to="/destinations" className="m-1">
+            See more
+          </Link>
           <ArrowForward className="mb-0.5" />
         </h1>
       </div>

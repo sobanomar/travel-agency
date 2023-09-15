@@ -3,6 +3,7 @@ import React from "react";
 import homeHero from "../../assets/img/home-hero.jpg";
 import mapHero from "../../assets/img/home-hero-map.png";
 import getStarted from "../../assets/img/home-hero-get-started.png";
+import { Link } from "react-router-dom";
 
 const HomeHero = () => {
   return (
@@ -25,10 +26,12 @@ const HomeHero = () => {
           src={mapHero}
           className="absolute w-[80%] sm:w-[40%] top-[20%] sm:top-[5%] left-[5%] sm:left-[25%] "
         />
-        <img
-          src={getStarted}
-          className="absolute w-[8%] top-[70%] left-[47.5%] z-10 hidden sm:block"
-        />
+        <Link to="/destinations">
+          <img
+            src={getStarted}
+            className="absolute w-[8%] top-[70%] left-[47.5%] z-10 hidden sm:block"
+          />
+        </Link>
         <div className="w-[40%] sm:w-[50%] h-[90%] md:h-[120%] overflow-x-hidden flex items-center justify-end sm:justify-center">
           <img
             className="z-0 mt-32 rounded-r-none rounded-l-xl sm:rounded-xl sm:rotate-3 md:ml-12 md:-mt-16 sm:w-[80%] h-[70%] md:h-[95%] md:w-[100%] object-cover"

@@ -2,6 +2,7 @@ import React from "react";
 import bestPackage from "../../assets/img/best-package.jpg";
 import mapLeft from "../../assets/img/best-package-left.png";
 import mapRight from "../../assets/img/best-package-right.png";
+import { Link } from "react-router-dom";
 
 const BestPackage = () => {
   return (
@@ -25,7 +26,7 @@ const BestPackage = () => {
             Porro, nihil perferendis?
           </p>
           <button className="text-white bg-purple-600 py-2 px-10 md:mt-10 rounded-full w-44">
-            Get Now
+            <Link to="/destinations">Get Now</Link>
           </button>
         </div>
       </div>

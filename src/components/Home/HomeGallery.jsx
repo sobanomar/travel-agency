@@ -72,6 +72,7 @@
 // export default HomeGallery;
 
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const GallerySection = () => {
   const [Images, setImages] = useState(null);
@@ -88,7 +89,7 @@ const GallerySection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col-reverse md:flex-row mx-5 md:mx-10 lg:mx-20 my-10 sm:my-20 md:h-screen">
+    <div className="flex flex-col-reverse md:flex-row mx-5 md:mx-20 lg:mx-20 my-10 sm:my-20 md:h-screen">
       {Images && (
         <>
           <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 my-8 md:hidden">
@@ -160,7 +161,7 @@ const GallerySection = () => {
               </p>
             </div>
             <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 my-4 hidden md:block">
-              See More
+              <Link to="/gallery">See More</Link>
             </button>
           </div>
         </>

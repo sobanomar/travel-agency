@@ -17,6 +17,7 @@ const Home = () => {
     }
     getData();
   }, []);
+  // console.log(homeData?.destination);
   return (
     <>
       <HomeHero />
