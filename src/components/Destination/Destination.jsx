@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RecommendedDestinations from "./RecommendedDestinations";
 import Hero from "../Common/Hero";
-import BestPackage from "../Common/BestPackage";
 import Testimonial from "../Common/Testimonial";
 import PopularDestinations from "./PopularDestinations";
 import destinationBgImg from "../../assets/img/destinations_hero.jpg";

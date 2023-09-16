@@ -8,6 +8,7 @@ import FacebookIcon from "../assets/socials/facebook_icon.png";
 import InstagramIcon from "../assets/socials/instagram_icon.png";
 import TwitterIcon from "../assets/socials/twitter_icon.png";
 import LinkedInIcon from "../assets/socials/linkedin_icon.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,11 +31,21 @@ const Footer = () => {
             </div>
             <div className=" md:w-[14%] flex md:justify-center">
               <div>
-                <div className="text-xl font-semibold my-4">Page</div>
-                <p className="my-1 font-thin">Packages</p>
-                <p className="my-1 font-thin">Gallery</p>
-                <p className="my-1 font-thin"> Tour Guide</p>
-                <p className="my-1 font-thin">FaQ</p>
+                <div className="text-xl font-semibold my-4">Pages</div>
+                <div className="flex flex-col gap-2 font-thin">
+                  <Link to="/about" className="hover:text-purple-900">
+                    About
+                  </Link>
+                  <Link to="/destinations" className="hover:text-purple-900">
+                    Destinations
+                  </Link>
+                  <Link to="/gallery" className="hover:text-purple-900">
+                    Our Gallery
+                  </Link>
+                  <Link to="/contact" className="hover:text-purple-900">
+                    Contact Us
+                  </Link>
+                </div>
               </div>
             </div>
             <div className=" md:w-[14%] flex md:justify-center">

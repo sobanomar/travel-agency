@@ -3,8 +3,37 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
+const menu = [
+  {
+    label: "Home",
+    link: "/",
+    id: 1,
+  },
+  {
+    label: "About Us",
+    link: "/about",
+    id: 2,
+  },
+  {
+    label: "Destinations",
+    link: "/destinations",
+    id: 3,
+  },
+  {
+    label: "Our Gallery",
+    link: "/gallery",
+    id: 4,
+  },
+  {
+    label: "Contact Us",
+    link: "/contact",
+    id: 5,
+  },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(1);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,22 +73,23 @@ const Header = () => {
             </div>
           </h1>
         </div>
-        <div className="hidden md:flex space-x-4">
-          <Link to="/" className="hover:text-purple-400">
-            Home
-          </Link>
-          <Link to="/about" className="hover:text-purple-400">
-            About
-          </Link>
-          <Link to="/destinations" className="hover:text-purple-400">
-            Destinations
-          </Link>
-          <Link to="/gallery" className="hover:text-purple-400">
-            Our Gallery
-          </Link>
-          <Link to="/contact" className="hover:text-purple-400">
-            Contact Us
-          </Link>
+        <div className="hidden md:flex space-x-2 lg:space-x-4">
+          {menu.map((menuItem) => (
+            <Link
+              onClick={() => {
+                setActiveItem(menuItem.id);
+              }}
+              key={menuItem.id}
+              to={menuItem.link}
+              className={
+                menuItem.id === activeItem
+                  ? "hover:text-purple-400 text-purple-500"
+                  : "hover:text-purple-400"
+              }
+            >
+              {menuItem.label}
+            </Link>
+          ))}
         </div>
         <div className="md:hidden">
           <button
