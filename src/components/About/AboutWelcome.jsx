@@ -6,7 +6,7 @@ const AboutWelcome = ({ founder }) => {
   return (
     founder && (
       <>
-        <div className="my-10 mx-5 md:my-20 lg:mt-60 lg:mb-40 lg:mx-20 relative">
+        <div className="my-10 mx-5 md:my-20 lg:mt-60 lg:mb-20 lg:mx-20 relative">
           <div className="absolute md:left-[50%]">
             <img
               src={welcomeArrow}

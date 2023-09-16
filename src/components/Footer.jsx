@@ -33,16 +33,28 @@ const Footer = () => {
               <div>
                 <div className="text-xl font-semibold my-4">Pages</div>
                 <div className="flex flex-col gap-2 font-thin">
-                  <Link to="/about" className="hover:text-purple-900">
+                  <Link
+                    to="/about"
+                    className="hover:text-purple-900 transition duration-300"
+                  >
                     About
                   </Link>
-                  <Link to="/destinations" className="hover:text-purple-900">
+                  <Link
+                    to="/destinations"
+                    className="hover:text-purple-900 transition duration-300"
+                  >
                     Destinations
                   </Link>
-                  <Link to="/gallery" className="hover:text-purple-900">
+                  <Link
+                    to="/gallery"
+                    className="hover:text-purple-900 transition duration-300"
+                  >
                     Our Gallery
                   </Link>
-                  <Link to="/contact" className="hover:text-purple-900">
+                  <Link
+                    to="/contact"
+                    className="hover:text-purple-900 transition duration-300"
+                  >
                     Contact Us
                   </Link>
                 </div>
@@ -54,19 +66,27 @@ const Footer = () => {
                 <div className="my-2 font-thin text-md">
                   <a className="flex my-2 cursor-pointer">
                     <img className="w-6" src={InstagramIcon} />
-                    <p className="mx-2 hover:text-pink-400">Instagram</p>
+                    <p className="mx-2 hover:text-pink-400 transition duration-200">
+                      Instagram
+                    </p>
                   </a>
                   <a className="flex my-2 cursor-pointer">
                     <img className="w-6" src={FacebookIcon} />
-                    <p className="mx-2 hover:text-blue-500">Facebook</p>
+                    <p className="mx-2 hover:text-blue-500 transition duration-200">
+                      Facebook
+                    </p>
                   </a>
                   <a className="flex my-2 cursor-pointer">
                     <img className="w-6" src={TwitterIcon} />
-                    <p className="mx-2 hover:text-blue-300">Twitter</p>
+                    <p className="mx-2 hover:text-blue-300 transition duration-200">
+                      Twitter
+                    </p>
                   </a>
                   <a className="flex my-2 cursor-pointer">
                     <img className="w-6" src={LinkedInIcon} />
-                    <p className="mx-2 hover:text-blue-400">LinkedIn</p>
+                    <p className="mx-2 hover:text-blue-400 transition duration-200">
+                      LinkedIn
+                    </p>
                   </a>
                 </div>
               </div>
@@ -99,9 +119,12 @@ const Footer = () => {
                     Commodi, saepe!
                   </p>
                 </div>
-                <button className="text-white bg-purple-800 py-2 px-5 mt-10 rounded-full ">
-                  Booking Now
-                </button>
+                <Link
+                  to="/destinations"
+                  className="text-white hover:bg-purple-900 bg-purple-700 text-center py-2 px-5 my-4 rounded-full md:w-[10rem] transition duration-300"
+                >
+                  Book Now
+                </Link>
               </div>
             </div>
           </div>

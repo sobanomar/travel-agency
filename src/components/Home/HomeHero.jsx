@@ -30,7 +30,7 @@ const HomeHero = () => {
         <Link to="/destinations">
           <img
             src={getStartedSvg}
-            className="absolute w-[8%] top-[70%] left-[47.5%] z-10 hidden sm:block"
+            className="absolute w-[9%] top-[75%] left-[47.5%] z-10 hidden sm:block hover:scale-90 transform transition-transform duration-300"
           />
         </Link>
         <div className="w-[40%] sm:w-[50%] h-[90%] md:h-[120%] overflow-x-hidden flex items-center justify-end sm:justify-center">

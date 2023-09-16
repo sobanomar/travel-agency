@@ -83,8 +83,8 @@ const Header = () => {
               to={menuItem.link}
               className={
                 menuItem.id === activeItem
-                  ? "hover:text-purple-400 text-purple-500"
-                  : "hover:text-purple-400"
+                  ? "hover:text-purple-400 text-purple-500 transition duration-200"
+                  : "hover:text-purple-400 transition duration-200"
               }
             >
               {menuItem.label}
