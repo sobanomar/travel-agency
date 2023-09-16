@@ -3,6 +3,7 @@ import React from "react";
 import homeHero from "../../assets/img/home-hero.jpg";
 import mapHero from "../../assets/img/home-hero-map.png";
 import getStarted from "../../assets/img/home-hero-get-started.png";
+import getStartedSvg from "../../assets/img/home-get-started.svg";
 import { Link } from "react-router-dom";
 
 const HomeHero = () => {
@@ -28,7 +29,7 @@ const HomeHero = () => {
         />
         <Link to="/destinations">
           <img
-            src={getStarted}
+            src={getStartedSvg}
             className="absolute w-[8%] top-[70%] left-[47.5%] z-10 hidden sm:block"
           />
         </Link>
