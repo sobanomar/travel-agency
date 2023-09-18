@@ -43,7 +43,7 @@ const Header = () => {
       <div className="flex justify-between md:mx-8 lg:mx-20 py-8 mx-5  md:px-0">
         <div className="text-xl">
           <h1 className="font-semibold md:text-xl lg:text-3xl text-[16px] header-name-text">
-            <div className="rainbow-text">
+            <Link to="/" className="rainbow-text">
               {/* <span class="violet">V</span>
               <span class="indigo">I</span>
               <span class="blue">S</span>
@@ -70,7 +70,7 @@ const Header = () => {
               <span class="indigo">L</span>
               <span class="blue">S</span> */}
               VISITING MY FRIEND TRAVELS
-            </div>
+            </Link>
           </h1>
         </div>
         <div className="hidden md:flex space-x-2 lg:space-x-4">

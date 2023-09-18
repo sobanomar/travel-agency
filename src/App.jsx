@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Outlet,
-  createBrowserRouter,
-  ScrollRestoration,
-} from "react-router-dom";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
@@ -12,18 +8,22 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact/Contact";
 import Gallery from "./components/Gallery/Gallery";
 import Destination from "./components/Destination/Destination";
-import DestinationDetails from "./components/SingleDestination/DestinationDetails";
 import SingleDestination from "./components/SingleDestination/SingleDestination";
 import ScrollToTop from "./components/utils/ScrollToTop";
+import Booking from "./components/Booking/Booking";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 const AppLayout = () => {
   return (
     <div>
-      <ScrollToTop>
-        <Header />
-        <Outlet />
-        <Footer />
-      </ScrollToTop>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <ScrollToTop>
+          <Header />
+          <Outlet />
+          <Footer />
+        </ScrollToTop>
+      </LocalizationProvider>
     </div>
   );
 };
@@ -56,6 +56,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/destination/:desId",
         element: <SingleDestination />,
+      },
+      {
+        path: "/booking/:bookingId",
+        element: <Booking />,
       },
     ],
   },

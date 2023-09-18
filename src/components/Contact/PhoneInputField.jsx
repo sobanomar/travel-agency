@@ -23,7 +23,11 @@ function PhoneInputField(props) {
       onBlur={onBlur}
       placeholder={placeholder}
       required={required}
-      inputStyle={{ width: "100%", padding: "15px 50px" }}
+      inputStyle={{
+        width: "100%",
+        padding: "15px 50px",
+        borderColor: error && "red",
+      }}
     />
   );
 }

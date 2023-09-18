@@ -35,25 +35,25 @@ const Footer = () => {
                 <div className="flex flex-col gap-2 font-thin">
                   <Link
                     to="/about"
-                    className="hover:text-purple-900 transition duration-300"
+                    className="hover:text-purple-200 transition duration-300"
                   >
                     About
                   </Link>
                   <Link
                     to="/destinations"
-                    className="hover:text-purple-900 transition duration-300"
+                    className="hover:text-purple-200 transition duration-300"
                   >
                     Destinations
                   </Link>
                   <Link
                     to="/gallery"
-                    className="hover:text-purple-900 transition duration-300"
+                    className="hover:text-purple-200 transition duration-300"
                   >
                     Our Gallery
                   </Link>
                   <Link
                     to="/contact"
-                    className="hover:text-purple-900 transition duration-300"
+                    className="hover:text-purple-200 transition duration-300"
                   >
                     Contact Us
                   </Link>
@@ -64,29 +64,21 @@ const Footer = () => {
               <div>
                 <div className="text-xl font-semibold my-4">Socials</div>
                 <div className="my-2 font-thin text-md">
-                  <a className="flex my-2 cursor-pointer">
+                  <a className="flex my-2 cursor-pointer hover:text-pink-400 transition duration-200">
                     <img className="w-6" src={InstagramIcon} />
-                    <p className="mx-2 hover:text-pink-400 transition duration-200">
-                      Instagram
-                    </p>
+                    <p className="mx-2 ">Instagram</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer">
+                  <a className="flex my-2 cursor-pointer hover:text-blue-500 transition duration-200">
                     <img className="w-6" src={FacebookIcon} />
-                    <p className="mx-2 hover:text-blue-500 transition duration-200">
-                      Facebook
-                    </p>
+                    <p className="mx-2 ">Facebook</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer">
+                  <a className="flex my-2 cursor-pointer hover:text-blue-300 transition duration-200">
                     <img className="w-6" src={TwitterIcon} />
-                    <p className="mx-2 hover:text-blue-300 transition duration-200">
-                      Twitter
-                    </p>
+                    <p className="mx-2 ">Twitter</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer">
+                  <a className="flex my-2 cursor-pointer hover:text-blue-400 transition duration-200">
                     <img className="w-6" src={LinkedInIcon} />
-                    <p className="mx-2 hover:text-blue-400 transition duration-200">
-                      LinkedIn
-                    </p>
+                    <p className="mx-2 ">LinkedIn</p>
                   </a>
                 </div>
               </div>

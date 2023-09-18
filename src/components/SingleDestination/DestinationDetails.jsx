@@ -2,6 +2,7 @@ import React from "react";
 // import DestinationImage from "../assets/img/destination-detail-1.jpg";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { Rating } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const DestinationDetails = ({ destination }) => {
   return (
@@ -39,9 +40,12 @@ const DestinationDetails = ({ destination }) => {
             </div>
           </div>
           <p className="text-lg">{destination?.description}</p>
-          <button className="text-white bg-purple-600 py-2 px-10 my-5 rounded-full w-52">
+          <Link
+            to={`/booking/${destination.id}`}
+            className="text-white bg-purple-600 py-2 px-10 my-5 rounded-full w-52 text-center"
+          >
             Booking Now
-          </button>
+          </Link>
         </div>
         <div className=" md:mx-10 lg:mx-14 xl:mx-20">
           <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold my-2">

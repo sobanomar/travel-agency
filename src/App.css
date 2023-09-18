@@ -19,7 +19,7 @@ body {
 }
 
 .header-name-text {
-  /* background-image: linear-gradient(
+  /*background-image: linear-gradient(
     to left,
     violet,
     indigo,
@@ -29,14 +29,14 @@ body {
     orange,
     red
   );
-  
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
   color: #fff;
   text-shadow: -2px 2px #ef3550, -4px 4px #f48fb1, -6px 6px #7e57c2,
     -8px 8px #2196f3, -10px 10px #26c6da, -12px 12px #43a047, -14px 14px #eeff41,
-    -16px 16px #f9a825, -18px 18px #ff5722; */
+    -16px 16px #f9a825, -18px 18px #ff5722;*/
 }
 
 .rainbow-text {
