@@ -6,6 +6,7 @@ import HomePopularDestinations from "./HomePopularDestinations";
 import HomePackage from "./HomePackage";
 import HomeGallery from "./HomeGallery";
 import Testimonial from "../Common/Testimonial";
+import BestPackage from "../Common/BestPackage";
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
@@ -23,9 +24,10 @@ const Home = () => {
       <HomeHero />
       <HomeAbout />
       <HomePopularDestinations destinations={homeData?.destination} />
-      <HomeWhyChooseUs />
       <HomePackage destinations={homeData?.destination} />
+      <HomeWhyChooseUs />
       <HomeGallery />
+      <BestPackage />
       <Testimonial />
     </>
   );

@@ -6,18 +6,16 @@ import { Link } from "react-router-dom";
 
 const BestPackage = () => {
   return (
-    <div className="my-5 sm:my-10 md:my-20 relative h-[20rem] sm:h-[30rem]">
-      <div>
+    <div className="my-5 sm:my-10 md:my-28 relative overflow-hidden">
+      <div className="absolute h-full">
         <img
-          className="absolute w-[40%] top-[23%] hidden"
-          src={mapLeft}
-          alt=""
+          src={bestPackage}
+          className="object-cover h-full w-[100rem] brightness-50 z-0 "
         />
-        <img className="absolute left-[60%] w-[40%]" src={mapRight} alt="" />
       </div>
-      <div className="flex justify-center">
-        <div className="z-10 absolute text-white flex flex-col text-center items-center sm:w-[70%] ">
-          <h1 className="text-2xl mt-16 sm:mt-28 sm:text-3xl md:text-5xl lg:text-6xl ">
+      <div className="flex justify-center my-20 md:my-28">
+        <div className="z-10 text-white flex flex-col text-center items-center sm:w-[70%]">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl ">
             Best Holiday package For You
           </h1>
           <p className="m-2 text-center sm:text-lg md:text-xl font-thin">
@@ -29,13 +27,6 @@ const BestPackage = () => {
             <Link to="/destinations">Get Now</Link>
           </button>
         </div>
-      </div>
-
-      <div className=" h-full">
-        <img
-          src={bestPackage}
-          className=" h-full w-full object-cover object-center brightness-50 z-0 "
-        />
       </div>
     </div>
   );
