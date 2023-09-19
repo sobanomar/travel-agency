@@ -64,19 +64,32 @@ const Footer = () => {
               <div>
                 <div className="text-xl font-semibold my-4">Socials</div>
                 <div className="my-2 font-thin text-md">
-                  <a className="flex my-2 cursor-pointer hover:text-pink-400 transition duration-200">
+                  <a
+                    target="_blank"
+                    className="flex my-2 cursor-pointer hover:text-pink-400 transition duration-200"
+                  >
                     <img className="w-6" src={InstagramIcon} />
                     <p className="mx-2 ">Instagram</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer hover:text-blue-500 transition duration-200">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/visitingmyfriendtravels?mibextid=LQQJ4d"
+                    className="flex my-2 cursor-pointer hover:text-blue-500 transition duration-200"
+                  >
                     <img className="w-6" src={FacebookIcon} />
                     <p className="mx-2 ">Facebook</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer hover:text-blue-300 transition duration-200">
+                  <a
+                    target="_blank"
+                    className="flex my-2 cursor-pointer hover:text-blue-300 transition duration-200"
+                  >
                     <img className="w-6" src={TwitterIcon} />
                     <p className="mx-2 ">Twitter</p>
                   </a>
-                  <a className="flex my-2 cursor-pointer hover:text-blue-400 transition duration-200">
+                  <a
+                    target="_blank"
+                    className="flex my-2 cursor-pointer hover:text-blue-400 transition duration-200"
+                  >
                     <img className="w-6" src={LinkedInIcon} />
                     <p className="mx-2 ">LinkedIn</p>
                   </a>
@@ -112,7 +125,7 @@ const Footer = () => {
                   </p>
                 </div>
                 <Link
-                  to="/destinations"
+                  to="/booking/manual-booking"
                   className="text-white hover:bg-purple-900 bg-purple-700 text-center py-2 px-5 my-4 rounded-full md:w-[10rem] transition duration-300"
                 >
                   Book Now

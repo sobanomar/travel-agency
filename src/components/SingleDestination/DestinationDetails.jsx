@@ -40,12 +40,14 @@ const DestinationDetails = ({ destination }) => {
             </div>
           </div>
           <p className="text-lg">{destination?.description}</p>
-          <Link
-            to={`/booking/${destination.id}`}
-            className="text-white bg-purple-600 py-2 px-10 my-5 rounded-full w-52 text-center"
-          >
-            Booking Now
-          </Link>
+          {destination && (
+            <Link
+              to={`/booking/${destination.id}`}
+              className="text-white bg-purple-600 py-2 px-10 my-5 rounded-full w-52 text-center"
+            >
+              Book Now
+            </Link>
+          )}
         </div>
         <div className=" md:mx-10 lg:mx-14 xl:mx-20">
           <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold my-2">

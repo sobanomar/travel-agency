@@ -28,13 +28,13 @@ const HomePackage = ({ destinations }) => {
         </div>
 
         <div className="flex flex-col justify-between gap-5 md:gap-10 my-10  md:my-20 md:flex-row   ">
-          <div className="w-[100%] ">
+          <div className="w-[50%]">
             <img
               src={destinations[0].images}
               className="w-[100%] h-[100%] rounded-3xl object-cover md:rotate-2 img-glow"
             />
           </div>
-          <div className="flex flex-col items-center my-4">
+          <div className="flex flex-col items-center my-4 w-[50%]">
             <h1 className="font-bold h-[4rem] my-2 md:my-4 text-2xl md:text-xl lg:text-2xl xl:text-3xl">
               {destinations[0].name}
             </h1>
@@ -78,7 +78,7 @@ const HomePackage = ({ destinations }) => {
         </div>
 
         <div className="flex flex-col-reverse justify-between gap-5 md:gap-10 my-10 md:my-20 md:flex-row   ">
-          <div className="flex flex-col items-center my-4">
+          <div className="flex flex-col items-center my-4 w-[50%]">
             <h1 className="font-bold h-[4rem] my-2 md:my-4 text-2xl md:text-xl lg:text-2xl xl:text-3xl">
               {destinations[1].name}
             </h1>
@@ -111,7 +111,7 @@ const HomePackage = ({ destinations }) => {
               See detail
             </Link>
           </div>
-          <div className="w-[100%] ">
+          <div className="w-[50%]">
             <img
               src={pic2}
               className="w-[100%] h-[100%] rounded-3xl object-cover md:-rotate-2 img-glow"

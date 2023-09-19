@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -16,10 +16,11 @@ import {
   Select,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { DatePicker, DesktopDatePicker } from "@mui/x-date-pickers";
 
-const BookingForm = () => {
+const BookingForm = ({ destinations, packages }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [dateData, setDateData] = useState([]);
+
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -34,41 +35,138 @@ const BookingForm = () => {
       fullName: Yup.string().required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       phone: Yup.string().required("Required"),
+      destination: Yup.string().required("Required"),
+      date: Yup.string().required("Required"),
+      packageType: Yup.string().required("Required"),
       message: Yup.string(),
     }),
     onSubmit: (values) => {
       console.log(values);
-      const url = "http://35.173.181.194:8000/contactus/";
-      const data = {
-        email: values.email,
-        full_name: values.fullName,
-        message: values.message,
-        phone_number: values.phone,
-      };
+      // const url = "http://35.173.181.194:8000/contactus/";
+      // const data = {
+      //   email: values.email,
+      //   full_name: values.fullName,
+      //   message: values.message,
+      //   phone_number: values.phone,
+      // };
 
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((responseData) => {
-          setFormSubmitted(true);
-          formik.setSubmitting(false);
-          console.log("Response Data:", responseData);
-        })
-        .catch((error) => {
-          console.error("Fetch Error:", error);
-        });
+      // fetch(url, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       throw new Error("Network response was not ok");
+      //     }
+      //     return response.json();
+      //   })
+      //   .then((responseData) => {
+      //     setFormSubmitted(true);
+      //     formik.setSubmitting(false);
+      //     console.log("Response Data:", responseData);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Fetch Error:", error);
+      //   });
     },
   });
+
+  useEffect(() => {
+    const selectedDestination = formik.values.destination;
+    let filteredDestination = null;
+
+    if (destinations) {
+      filteredDestination = destinations.filter((destination) => {
+        return destination.name === selectedDestination;
+      });
+    }
+
+    async function getData() {
+      if (filteredDestination) {
+        const dateResponse = await fetch(
+          `http://35.173.181.194:8000/booking/destination/${filteredDestination[0]?.id}/date/`
+        );
+        const responseData = await dateResponse.json();
+        setDateData([responseData.date]);
+      }
+    }
+    getData();
+  }, [formik.values.destination]);
+
+  const renderSelectField = (name, label, options) => (
+    <FormControl fullWidth>
+      <InputLabel
+        id={name + "-label"}
+        sx={{
+          color:
+            formik.touched[name] && Boolean(formik.errors[name])
+              ? "#B90E0A"
+              : "",
+        }}
+      >
+        {label}*
+      </InputLabel>
+      <Select
+        labelId={name + "-label"}
+        label={label}
+        id={name}
+        name={name}
+        value={formik.values[name]}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        error={formik.touched[name] && Boolean(formik.errors[name])}
+      >
+        {options &&
+          options.map((option) => (
+            <MenuItem key={option.id} value={option.name}>
+              {option.name}
+            </MenuItem>
+          ))}
+      </Select>
+      {formik.touched[name] && Boolean(formik.errors[name]) && (
+        <div className="text-xs mt-1 mx-4 text-red-700">Required</div>
+      )}
+    </FormControl>
+  );
+
+  const renderDateSelectField = (name, label, options) => (
+    <FormControl fullWidth>
+      <InputLabel
+        id={name + "-label"}
+        sx={{
+          color:
+            formik.touched[name] && Boolean(formik.errors[name])
+              ? "#B90E0A"
+              : "",
+        }}
+      >
+        {label}*
+      </InputLabel>
+      <Select
+        labelId={name + "-label"}
+        label={label}
+        id={name}
+        name={name}
+        value={formik.values[name]}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        error={formik.touched[name] && Boolean(formik.errors[name])}
+      >
+        {options &&
+          options.map((option) => (
+            <MenuItem key={option} value={option}>
+              {option}
+            </MenuItem>
+          ))}
+      </Select>
+      {formik.touched[name] && Boolean(formik.errors[name]) && (
+        <div className="text-xs mt-1 mx-4 text-red-700">Required</div>
+      )}
+    </FormControl>
+  );
 
   const renderTextField = (name, label, type = "text", multiline = false) => (
     <TextField
@@ -122,49 +220,13 @@ const BookingForm = () => {
                 )}
               </Grid>
               <Grid item xs={6}>
-                <FormControl fullWidth>
-                  <InputLabel id="destination-label">Destination</InputLabel>
-                  <Select
-                    label="Destination"
-                    labelId="destination-label"
-                    id=""
-                    // onChange={handleChange}
-                  >
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem>Sir</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                  </Select>
-                </FormControl>
+                {renderSelectField("destination", "Destination", destinations)}
               </Grid>
               <Grid item xs={12}>
-                <FormControl fullWidth>
-                  <InputLabel id="date-label">Age</InputLabel>
-                  <Select
-                    label="Date"
-                    labelId="date-label"
-                    id=""
-                    // onChange={handleChange}
-                  >
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem>Sir</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                  </Select>
-                </FormControl>
+                {renderDateSelectField("date", "Date", dateData)}
               </Grid>
               <Grid item xs={12}>
-                <FormControl fullWidth>
-                  <InputLabel id="packages-label">Packages</InputLabel>
-                  <Select
-                    label="Packages"
-                    labelId="package-label"
-                    id=""
-                    // onChange={handleChange}
-                  >
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem>Sir</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                  </Select>
-                </FormControl>
+                {renderSelectField("packageType", "Package Type", packages)}
               </Grid>
               <Grid item xs={12}>
                 {renderTextField(

@@ -58,7 +58,7 @@ export const appRouter = createBrowserRouter([
         element: <SingleDestination />,
       },
       {
-        path: "/booking/:bookingId",
+        path: "/booking/manual-booking",
         element: <Booking />,
       },
     ],
