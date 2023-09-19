@@ -48,7 +48,7 @@ const DestinationCard = ({ destination }) => {
           </span> */}
         </div>
         <Link
-          to={`/destination/${destination.id}`}
+          to={`/destinations/${destination.id}`}
           className="text-white bg-purple-600 text-lg px-8 rounded-full py-2"
         >
           See detail

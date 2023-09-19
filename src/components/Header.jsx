@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -33,7 +33,12 @@ const menu = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(1);
+
+  const location = useLocation();
+
+  const parts = location.pathname.split("/");
+
+  console.log(parts[1]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,31 +49,6 @@ const Header = () => {
         <div className="text-xl">
           <h1 className="font-semibold md:text-xl lg:text-3xl text-[16px] header-name-text">
             <Link to="/" className="rainbow-text">
-              {/* <span class="violet">V</span>
-              <span class="indigo">I</span>
-              <span class="blue">S</span>
-              <span class="green">I</span>
-              <span class="yellow">T</span>
-              <span class="orange">I</span>
-              <span class="red">N</span>
-              <span>G</span>
-              <span class="violet">M</span>
-              <span class="indigo">Y</span>
-              <span class="blue"> </span>
-              <span class="green">F</span>
-              <span class="yellow">R</span>
-              <span class="orange">I</span>
-              <span class="red">E</span>
-              <span class="violet">N</span>
-              <span class="indigo">D</span>
-              <span class="blue"> </span>
-              <span class="green">T</span>
-              <span class="yellow">R</span>
-              <span class="orange">A</span>
-              <span class="red">V</span>
-              <span class="violet">E</span>
-              <span class="indigo">L</span>
-              <span class="blue">S</span> */}
               VISITING MY FRIEND TRAVELS
             </Link>
           </h1>
@@ -76,13 +56,10 @@ const Header = () => {
         <div className="hidden md:flex space-x-2 lg:space-x-4">
           {menu.map((menuItem) => (
             <Link
-              onClick={() => {
-                setActiveItem(menuItem.id);
-              }}
               key={menuItem.id}
               to={menuItem.link}
               className={
-                menuItem.id === activeItem
+                menuItem.link === "/" + parts[1]
                   ? "hover:text-purple-400 text-purple-500 transition duration-200"
                   : "hover:text-purple-400 transition duration-200"
               }

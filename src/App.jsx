@@ -54,7 +54,7 @@ export const appRouter = createBrowserRouter([
         element: <Destination />,
       },
       {
-        path: "/destination/:desId",
+        path: "/destinations/:desId",
         element: <SingleDestination />,
       },
       {
