@@ -7,6 +7,7 @@ import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { Rating } from "@mui/material";
+import SeeMore from "../Common/SeeMore";
 
 const HomePackage = ({ destinations }) => {
   return (
@@ -19,12 +20,9 @@ const HomePackage = ({ destinations }) => {
           <h1 className="text-2xl text-center  sm:text-3xl md:text-left md:w-[60%] lg:text-4xl lg:w-[60%] xl:text-5xl xl:w-[55%]">
             We Provide A Choice Of Packages Suitable For You
           </h1>
-          <h1 className="text-sm text-center mt-4  text-purple-600 font-semibold cursor-pointer">
-            <Link to="/destinations" className="m-1">
-              See more
-            </Link>
-            <ArrowForward className="mb-0.5" />
-          </h1>
+          <div>
+            <SeeMore to={"/destinations"}></SeeMore>
+          </div>
         </div>
 
         <div className="flex flex-col justify-between gap-5 md:gap-10 my-10  md:my-20 md:flex-row   ">

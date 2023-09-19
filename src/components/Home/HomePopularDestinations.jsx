@@ -1,7 +1,6 @@
 import React from "react";
-import ArrowForward from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
 import DestinationCard from "../Common/DestinationCard";
+import SeeMore from "../Common/SeeMore";
 const PopularDestinations = ({ destinations }) => {
   return (
     destinations && (
@@ -14,13 +13,7 @@ const PopularDestinations = ({ destinations }) => {
             Popular Destination Of This Year For You{" "}
           </h1>
           <div>
-            <Link
-              to={"/destinations"}
-              className="text-sm hidden md:block text-purple-600 font-semibold cursor-pointer"
-            >
-              <span className="m-1">See more</span>
-              <ArrowForward className="mb-0.5" />
-            </Link>
+            <SeeMore to="/destinations" />
           </div>
         </div>
 
