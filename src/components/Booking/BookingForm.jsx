@@ -6,6 +6,8 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import PhoneInputField from "../Contact/PhoneInputField";
 import {
@@ -16,11 +18,30 @@ import {
   Select,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useParams } from "react-router-dom";
 
 const BookingForm = ({ destinations, packages }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [dateData, setDateData] = useState([]);
 
+  const { bookingId } = useParams();
+  //Converting booking id from string to number for filtering
+  const bookingIdNumber = parseInt(bookingId);
+
+  // Filtering destinations based on booking id
+  let idFilteredDestination = null;
+  if (bookingId) {
+    idFilteredDestination = destinations?.find((destination) => {
+      return destination.id === bookingIdNumber;
+    });
+  }
+
+  // Setting filtered auto booking destination in the destinaitons.
+  if (idFilteredDestination) {
+    destinations = [idFilteredDestination];
+  }
+
+  // Initializing formik values, validation and submit form logic
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -28,8 +49,8 @@ const BookingForm = ({ destinations, packages }) => {
       email: "",
       message: "",
       destination: "",
-      date: "",
       packageType: "",
+      date: "",
     },
     validationSchema: Yup.object({
       fullName: Yup.string().required("Required"),
@@ -41,39 +62,69 @@ const BookingForm = ({ destinations, packages }) => {
       message: Yup.string(),
     }),
     onSubmit: (values) => {
-      console.log(values);
-      // const url = "http://35.173.181.194:8000/contactus/";
-      // const data = {
-      //   email: values.email,
-      //   full_name: values.fullName,
-      //   message: values.message,
-      //   phone_number: values.phone,
-      // };
+      const url = "http://35.173.181.194:8000/booking/confirm/";
+      const destIndex = destinations.find(
+        (destination) => values.destination === destination.name
+      );
+      const packageIndex = packages.find(
+        (pkg) => values.packageType === pkg.name
+      );
+      // console.log("destination:", destIndex, "package:", packageIndex);
 
-      // fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // })
-      //   .then((response) => {
-      //     if (!response.ok) {
-      //       throw new Error("Network response was not ok");
-      //     }
-      //     return response.json();
-      //   })
-      //   .then((responseData) => {
-      //     setFormSubmitted(true);
-      //     formik.setSubmitting(false);
-      //     console.log("Response Data:", responseData);
-      //   })
-      //   .catch((error) => {
-      //     console.error("Fetch Error:", error);
-      //   });
+      const data = {
+        name: values.fullName,
+        email: values.email,
+        phone: values.phone,
+        destination: destIndex.id,
+        package_type: packageIndex.id,
+        date: values.date,
+        message: values.message,
+      };
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((responseData) => {
+          setFormSubmitted(true);
+          formik.setSubmitting(false);
+          toast.success("Your booking has been created", {
+            position: "bottom-right", // You can change the position if needed
+            autoClose: 5000, // 5000 milliseconds (5 seconds)
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style: {
+              backgroundColor: "purple", // Set the background color to purple
+              color: "white",
+            },
+          });
+          // console.log("Response Data:", responseData);
+        })
+        .catch((error) => {
+          console.error("Fetch Error:", error);
+        });
     },
   });
 
+  useEffect(() => {
+    // Setting auto-booking destination in formik value
+    idFilteredDestination &&
+      formik.setFieldValue("destination", destinations[0].name);
+  }, [idFilteredDestination]);
+
+  // Fetching dates based on the selected destination
   useEffect(() => {
     const selectedDestination = formik.values.destination;
     let filteredDestination = null;
@@ -96,44 +147,56 @@ const BookingForm = ({ destinations, packages }) => {
     getData();
   }, [formik.values.destination]);
 
-  const renderSelectField = (name, label, options) => (
-    <FormControl fullWidth>
-      <InputLabel
-        id={name + "-label"}
-        sx={{
-          color:
-            formik.touched[name] && Boolean(formik.errors[name])
-              ? "#B90E0A"
-              : "",
-        }}
-      >
-        {label}*
-      </InputLabel>
-      <Select
-        labelId={name + "-label"}
-        label={label}
-        id={name}
-        name={name}
-        value={formik.values[name]}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+  // Render function for input fields
+  const renderSelectField = (name, label, options, disable) =>
+    options && (
+      <FormControl
+        fullWidth
         error={formik.touched[name] && Boolean(formik.errors[name])}
+        defaultValue={options[0]?.name}
+        color="secondary"
       >
-        {options &&
-          options.map((option) => (
-            <MenuItem key={option.id} value={option.name}>
-              {option.name}
-            </MenuItem>
-          ))}
-      </Select>
-      {formik.touched[name] && Boolean(formik.errors[name]) && (
-        <div className="text-xs mt-1 mx-4 text-red-700">Required</div>
-      )}
-    </FormControl>
-  );
+        <InputLabel
+          id={name + "-label"}
+          sx={{
+            color:
+              formik.touched[name] && Boolean(formik.errors[name])
+                ? "#B90E0A"
+                : "",
+          }}
+        >
+          {label}*
+        </InputLabel>
+        <Select
+          disabled={Boolean(disable)}
+          labelId={name + "-label"}
+          label={label}
+          id={name}
+          name={name}
+          value={formik.values[name]}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        >
+          {options &&
+            options.map((option) => (
+              <MenuItem key={option.id} value={option.name}>
+                {option.name}
+              </MenuItem>
+            ))}
+        </Select>
+        {formik.touched[name] && Boolean(formik.errors[name]) && (
+          <div className="text-xs mt-1 mx-4 text-red-700">Required</div>
+        )}
+      </FormControl>
+    );
 
+  // Render function for date input field
   const renderDateSelectField = (name, label, options) => (
-    <FormControl fullWidth>
+    <FormControl
+      fullWidth
+      error={formik.touched[name] && Boolean(formik.errors[name])}
+      color="secondary"
+    >
       <InputLabel
         id={name + "-label"}
         sx={{
@@ -153,7 +216,6 @@ const BookingForm = ({ destinations, packages }) => {
         value={formik.values[name]}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        error={formik.touched[name] && Boolean(formik.errors[name])}
       >
         {options &&
           options.map((option) => (
@@ -168,6 +230,7 @@ const BookingForm = ({ destinations, packages }) => {
     </FormControl>
   );
 
+  // Render function for text field
   const renderTextField = (name, label, type = "text", multiline = false) => (
     <TextField
       fullWidth
@@ -175,6 +238,7 @@ const BookingForm = ({ destinations, packages }) => {
       name={name}
       label={label}
       type={type}
+      color="secondary"
       variant="outlined"
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}
@@ -187,6 +251,7 @@ const BookingForm = ({ destinations, packages }) => {
 
   return (
     <Container className="m-5 md:m-20">
+      <ToastContainer />
       <Grid container spacing={3}>
         <Grid item xs={24} md={12}>
           <div className="text-center font-semibold text-purple-500 my-2 ">
@@ -220,7 +285,12 @@ const BookingForm = ({ destinations, packages }) => {
                 )}
               </Grid>
               <Grid item xs={6}>
-                {renderSelectField("destination", "Destination", destinations)}
+                {renderSelectField(
+                  "destination",
+                  "Destination",
+                  destinations,
+                  bookingId
+                )}
               </Grid>
               <Grid item xs={12}>
                 {renderDateSelectField("date", "Date", dateData)}
@@ -239,7 +309,13 @@ const BookingForm = ({ destinations, packages }) => {
               <Grid item xs={12}>
                 <Box mt={2}>
                   <div className="flex">
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      type="submit"
+                      disabled={formSubmitted}
+                      style={{ borderRadius: "20px" }}
+                    >
                       {formik.isSubmitting ? (
                         <CircularProgress color="inherit" size={"80%"} />
                       ) : formSubmitted ? (

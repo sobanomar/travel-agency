@@ -61,6 +61,10 @@ export const appRouter = createBrowserRouter([
         path: "/booking/manual-booking",
         element: <Booking />,
       },
+      {
+        path: "/booking/auto/:bookingId",
+        element: <Booking />,
+      },
     ],
   },
 ]);

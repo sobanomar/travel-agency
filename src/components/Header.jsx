@@ -33,12 +33,8 @@ const menu = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const location = useLocation();
-
   const parts = location.pathname.split("/");
-
-  console.log(parts[1]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -60,7 +56,7 @@ const Header = () => {
               to={menuItem.link}
               className={
                 menuItem.link === "/" + parts[1]
-                  ? "text-purple-500 transition duration-300"
+                  ? "text-purple-500 transition duration-300]"
                   : "hover:text-purple-500 transition duration-300 hover:scale-[1.1]"
               }
             >

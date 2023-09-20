@@ -44,7 +44,7 @@ const DestinationDetails = ({ destination }) => {
           {destination && (
             <CustomButton
               label={"Book Now"}
-              redirectTo={`/booking/${destination.id}`}
+              redirectTo={`/booking/auto/${destination.id}`}
             />
           )}
         </div>

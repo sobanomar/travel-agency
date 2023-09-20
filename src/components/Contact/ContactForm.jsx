@@ -71,6 +71,7 @@ const ContactForm = () => {
       name={name}
       label={label}
       type={type}
+      color="secondary"
       variant="outlined"
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}
@@ -118,7 +119,12 @@ const ContactForm = () => {
               <Grid item xs={12}>
                 <Box mt={2}>
                   <div className="flex">
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      style={{ borderRadius: "20px" }}
+                      type="submit"
+                    >
                       {formik.isSubmitting ? (
                         <CircularProgress color="inherit" size={"80%"} />
                       ) : formSubmitted ? (
