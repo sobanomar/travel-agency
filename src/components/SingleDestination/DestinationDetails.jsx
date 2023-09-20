@@ -3,6 +3,7 @@ import React from "react";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
+import CustomButton from "../Common/CustomButton";
 
 const DestinationDetails = ({ destination }) => {
   return (
@@ -41,12 +42,10 @@ const DestinationDetails = ({ destination }) => {
           </div>
           <p className="text-lg">{destination?.description}</p>
           {destination && (
-            <Link
-              to={`/booking/${destination.id}`}
-              className="text-white bg-purple-600 py-2 px-10 my-5 rounded-full w-52 text-center"
-            >
-              Book Now
-            </Link>
+            <CustomButton
+              label={"Book Now"}
+              redirectTo={`/booking/${destination.id}`}
+            />
           )}
         </div>
         <div className=" md:mx-10 lg:mx-14 xl:mx-20">

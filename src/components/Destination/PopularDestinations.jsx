@@ -10,7 +10,7 @@ const PopularDestinations = ({ destinations }) => {
           Popular Destination
         </h1>
         <div className="flex flex-col justify-between md:flex-row">
-          <h1 className="text-3xl my-4 w-[100%] md:w-[80%] text-center md:text-4xl lg:text-5xl lg:text-left lg:w-[60%] xl:text-6xl">
+          <h1 className="text-3xl my-2 w-[100%] md:w-[80%] text-center md:text-4xl lg:text-5xl lg:text-left lg:w-[60%] xl:text-6xl">
             Popular Destination Of This Year For You{" "}
           </h1>
           {/* <div>

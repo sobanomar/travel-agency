@@ -11,7 +11,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const RecommendedDestinations = () => {
   return (
-    <div className="mx-5 md:my-40 md:mx-20">
+    <div className="mx-5 md:my-20 md:mx-20">
       <h1 className=" text-md font-semibold text-purple-600 text-center">
         Recommended Destination
       </h1>

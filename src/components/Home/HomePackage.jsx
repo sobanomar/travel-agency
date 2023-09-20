@@ -8,6 +8,7 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { Rating } from "@mui/material";
 import SeeMore from "../Common/SeeMore";
+import CustomButton from "../Common/CustomButton";
 
 const HomePackage = ({ destinations }) => {
   return (
@@ -66,12 +67,10 @@ const HomePackage = ({ destinations }) => {
             {!isSeeMore ? "see more" : "see less"}
           </span> */}
             </div>
-            <Link
-              to={`/destination/${destinations[0].id}`}
-              className="text-white bg-purple-600 text-lg px-8 rounded-full py-2"
-            >
-              See detail
-            </Link>
+            <CustomButton
+              label={"See Detail"}
+              redirectTo={`/destination/${destinations[0].id}`}
+            />
           </div>
         </div>
 
@@ -102,12 +101,10 @@ const HomePackage = ({ destinations }) => {
                 {destinations[1].description}
               </p>
             </div>
-            <Link
-              to={`/destination/${destinations[1].id}`}
-              className="text-white bg-purple-600 text-lg px-8 rounded-full py-2"
-            >
-              See detail
-            </Link>
+            <CustomButton
+              label={"See Detail"}
+              redirectTo={`/destination/${destinations[1].id}`}
+            />
           </div>
           <div className="w-[50%]">
             <img

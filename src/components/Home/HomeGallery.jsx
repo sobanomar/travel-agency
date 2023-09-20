@@ -73,6 +73,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CustomButton from "../Common/CustomButton";
 
 const GallerySection = () => {
   const [Images, setImages] = useState(null);
@@ -160,9 +161,7 @@ const GallerySection = () => {
                 ipsum dolor sit amet.
               </p>
             </div>
-            <button className="text-white bg-purple-600 text-lg px-8 rounded-full py-2 my-4 hidden md:block">
-              <Link to="/gallery">See More</Link>
-            </button>
+            <CustomButton label={"See More"} redirectTo={`/gallery`} />
           </div>
         </>
       )}

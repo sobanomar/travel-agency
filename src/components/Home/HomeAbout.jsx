@@ -4,6 +4,7 @@ import homeAbout1 from "../../assets/img/home-about-1.jpg";
 import homeAbout2 from "../../assets/img/home-about-2.jpg";
 import homeAboutArrow from "../../assets/img/home-about-arrow.png";
 import { Link } from "react-router-dom";
+import CustomButton from "../Common/CustomButton";
 
 const HomeAbout = () => {
   return (
@@ -49,9 +50,7 @@ const HomeAbout = () => {
             sunt soluta alias blanditiis, aliquid adipisci aperiam? Laborum
             officia provident aut!
           </p>
-          <button className="text-white bg-purple-600 py-2 px-10 mt-10 rounded-full w-52">
-            <Link to="/about">See Detail</Link>
-          </button>
+          <CustomButton label={"See Detail"} redirectTo={"/about"} />
         </div>
       </div>
     </div>

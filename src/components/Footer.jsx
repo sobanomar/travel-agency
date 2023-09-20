@@ -9,6 +9,7 @@ import InstagramIcon from "../assets/socials/instagram_icon.png";
 import TwitterIcon from "../assets/socials/twitter_icon.png";
 import LinkedInIcon from "../assets/socials/linkedin_icon.png";
 import { Link } from "react-router-dom";
+import CustomButton from "./Common/CustomButton";
 
 const Footer = () => {
   return (
@@ -124,12 +125,10 @@ const Footer = () => {
                     Commodi, saepe!
                   </p>
                 </div>
-                <Link
-                  to="/booking/manual-booking"
-                  className="text-white hover:bg-purple-900 bg-purple-700 text-center py-2 px-5 my-4 rounded-full md:w-[10rem] transition duration-300"
-                >
-                  Book Now
-                </Link>
+                <CustomButton
+                  label="Book Now"
+                  redirectTo="/booking/manual-booking"
+                />
               </div>
             </div>
           </div>

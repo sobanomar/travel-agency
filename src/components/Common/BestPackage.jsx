@@ -3,6 +3,7 @@ import bestPackage from "../../assets/img/best-package.jpg";
 import mapLeft from "../../assets/img/best-package-left.png";
 import mapRight from "../../assets/img/best-package-right.png";
 import { Link } from "react-router-dom";
+import CustomButton from "./CustomButton";
 
 const BestPackage = () => {
   return (
@@ -23,9 +24,7 @@ const BestPackage = () => {
             praesentium, veniam soluta eligendi atque sit laudantium ipsam?
             Porro, nihil perferendis?
           </p>
-          <button className="text-white bg-purple-600 py-2 px-10 md:mt-10 rounded-full w-44">
-            <Link to="/destinations">Get Now</Link>
-          </button>
+          <CustomButton label={"Get Now"} redirectTo={"/destinations"} />
         </div>
       </div>
     </div>
