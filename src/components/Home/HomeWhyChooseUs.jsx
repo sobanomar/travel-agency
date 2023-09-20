@@ -14,7 +14,7 @@ const HomeWhyChooseUs = () => {
           src={whyChooseUsBackground}
         />
         <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
-          <div className="w-[50%] flex justify-start">
+          <div className="w-[50%] flex justify-start hover:scale-[1.05] transition duration-500">
             <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyGlobe} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
@@ -27,7 +27,7 @@ const HomeWhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="w-[50%] flex justify-end">
+          <div className="w-[50%] flex justify-end hover:scale-[1.05] transition duration-500">
             <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[4.8rem]" src={whyPlane} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
@@ -42,7 +42,7 @@ const HomeWhyChooseUs = () => {
           </div>
         </div>
         <div className="flex md:mx-20 mx-2 sm:mx-5 py-10 sm:py-0">
-          <div className="w-[50%] flex justify-start">
+          <div className="w-[50%] flex justify-start hover:scale-[1.05] transition duration-500">
             <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyHotel} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">
@@ -55,7 +55,7 @@ const HomeWhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="w-[50%] flex justify-end">
+          <div className="w-[50%] flex justify-end hover:scale-[1.05] transition duration-500">
             <div className="md:w-[65%] lg:w-[55%] flex flex-col items-center">
               <img className="w-[6rem]" src={whyGlobe} />
               <h1 className="text-lg sm:text-3xl md:text-2xl xl:text-4xl my-2">

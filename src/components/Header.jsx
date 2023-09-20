@@ -60,8 +60,8 @@ const Header = () => {
               to={menuItem.link}
               className={
                 menuItem.link === "/" + parts[1]
-                  ? "hover:text-purple-400 text-purple-500 transition duration-200"
-                  : "hover:text-purple-400 transition duration-200"
+                  ? "text-purple-500 transition duration-300"
+                  : "hover:text-purple-500 transition duration-300 hover:scale-[1.1]"
               }
             >
               {menuItem.label}

@@ -7,7 +7,10 @@ const DestinationCard = ({ destination }) => {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   return (
-    <div key={destination.id} className="md:w-[30%] my-4">
+    <div
+      key={destination.id}
+      className="md:w-[30%] my-4 hover:scale-[1.05] transition duration-500"
+    >
       <div className="w-[100%]">
         <img
           src={destination.images}
