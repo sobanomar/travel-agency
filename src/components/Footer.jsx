@@ -67,6 +67,7 @@ const Footer = () => {
                 <div className="my-2 font-thin text-md">
                   <a
                     target="_blank"
+                    href="https://www.instagram.com/visitingmyfriendtravels/?igshid=MzRlODBiNWFlZA%3D%3D"
                     className="flex my-2 cursor-pointer hover:text-pink-400 transition duration-200"
                   >
                     <img className="w-6" src={InstagramIcon} />
