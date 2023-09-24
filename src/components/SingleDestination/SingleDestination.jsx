@@ -7,22 +7,19 @@ import { useParams } from "react-router-dom";
 import BestPackage from "../Common/BestPackage";
 import Testimonial from "../Common/Testimonial";
 import singleDestinationBgImg from "../../assets/img/single_destination_hero.jpg";
+import useData from "../../CustomHooks/useData";
 
 const SingleDestination = () => {
   const [destinationDetail, setDestinationDetail] = useState(null);
 
   const { desId } = useParams();
 
+  const { data, isLoading, error } = useData(`destination/${desId}/`);
   useEffect(() => {
-    async function getData() {
-      const response = await fetch(
-        `http://35.173.181.194:8000/destination/${desId}/`
-      );
-      const data = await response.json();
+    if (data) {
       setDestinationDetail(data);
     }
-    getData();
-  }, []);
+  }, [data]);
 
   const description =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore amet vitae aliquid maiores non aliquam deserunt consequuntur esse rerum!";

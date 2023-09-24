@@ -4,28 +4,25 @@ import BestPackage from "../Common/BestPackage.jsx";
 import bookingHeroBg from "../../assets/img/booking-bg-img.jpg";
 import BookingForm from "./BookingForm.jsx";
 import Testimonial from "../Common/Testimonial.jsx";
+import useData from "../../CustomHooks/useData.js";
 
 const Booking = () => {
   const [destinationsData, setDestinationsData] = useState(null);
   const [packagesData, setPackagesData] = useState(null);
 
+  const { data: destData } = useData("booking/destinations/");
+  const { data: pkgsData } = useData("booking/package/options/");
+
   useEffect(() => {
-    async function getData() {
-      const destinationsResponse = await fetch(
-        "http://35.173.181.194:8000/booking/destinations/"
-      );
-      const packagesResponse = await fetch(
-        "http://35.173.181.194:8000//booking/package/options/"
-      );
-
-      const destinationsData = await destinationsResponse.json();
-      const packagesData = await packagesResponse.json();
-
-      setDestinationsData(destinationsData);
-      setPackagesData(packagesData);
+    if (destData) {
+      setDestinationsData(destData);
     }
-    getData();
-  }, []);
+  }, [destData]);
+  useEffect(() => {
+    if (pkgsData) {
+      setPackagesData(pkgsData);
+    }
+  }, [pkgsData]);
 
   const textHero =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, velit";

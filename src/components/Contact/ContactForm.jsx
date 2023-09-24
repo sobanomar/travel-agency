@@ -12,6 +12,7 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import PhoneInputField from "./PhoneInputField";
 import { CircularProgress } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { BASE_URL } from "../../Constants/URL";
 
 const ContactForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -31,7 +32,7 @@ const ContactForm = () => {
       message: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      const url = "http://35.173.181.194:8000/contactus/";
+      const url = `${BASE_URL}contactus/`;
       const data = {
         email: values.email,
         first_name: values.firstName,

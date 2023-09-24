@@ -19,6 +19,7 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useParams } from "react-router-dom";
+import { BASE_URL } from "../../Constants/URL";
 
 const BookingForm = ({ destinations, packages }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -62,7 +63,7 @@ const BookingForm = ({ destinations, packages }) => {
       message: Yup.string(),
     }),
     onSubmit: (values) => {
-      const url = "http://35.173.181.194:8000/booking/confirm/";
+      const url = `${BASE_URL}booking/confirm/`;
       const destIndex = destinations.find(
         (destination) => values.destination === destination.name
       );
@@ -138,7 +139,7 @@ const BookingForm = ({ destinations, packages }) => {
     async function getData() {
       if (filteredDestination) {
         const dateResponse = await fetch(
-          `http://35.173.181.194:8000/booking/destination/${filteredDestination[0]?.id}/date/`
+          `${BASE_URL}/booking/destination/${filteredDestination[0]?.id}/date/`
         );
         const responseData = await dateResponse.json();
         setDateData([responseData.date]);

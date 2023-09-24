@@ -74,20 +74,17 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CustomButton from "../Common/CustomButton";
+import useData from "../../CustomHooks/useData";
 
 const GallerySection = () => {
   const [Images, setImages] = useState(null);
 
+  const { data, isLoading, error } = useData("gallery/");
   useEffect(() => {
-    async function getImages() {
-      const response = await fetch("http://35.173.181.194:8000/gallery/");
-      const images = await response.json();
-      const results = images?.results;
-
-      setImages(results);
+    if (data) {
+      setImages(data?.results);
     }
-    getImages();
-  }, []);
+  }, [data]);
 
   return (
     <div className="flex flex-col-reverse md:flex-row mx-5 md:mx-20 lg:mx-20 my-10 sm:my-20 md:h-screen">

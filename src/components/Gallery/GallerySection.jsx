@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
+import useData from "../../CustomHooks/useData";
 
 const GallerySection = () => {
   const [Images, setImages] = useState(null);
 
+  const { data, isLoading, error } = useData("gallery/");
   useEffect(() => {
-    async function getImages() {
-      const response = await fetch("http://35.173.181.194:8000/gallery/");
-      const images = await response.json();
-      const results = images?.results;
-
-      setImages(results);
+    if (data) {
+      setImages(data.results);
     }
-    getImages();
-  }, []);
+  }, [data]);
 
   return (
     <div className="mx-5 md:mx-10 lg:mx-20 pt-8 lg:pt-24">

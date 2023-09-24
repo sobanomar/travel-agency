@@ -4,19 +4,17 @@ import Hero from "../Common/Hero";
 import Testimonial from "../Common/Testimonial";
 import PopularDestinations from "./PopularDestinations";
 import destinationBgImg from "../../assets/img/destinations_hero.jpg";
+import useData from "../../CustomHooks/useData";
 
 const Destination = () => {
   const [destinationsData, setDestinationsData] = useState(null);
+
+  const { data, isLoading, error } = useData("destination/list/");
   useEffect(() => {
-    async function getData() {
-      const response = await fetch(
-        "http://35.173.181.194:8000/destination/list/"
-      );
-      const data = await response.json();
+    if (data) {
       setDestinationsData(data);
     }
-    getData();
-  }, []);
+  }, [data]);
 
   let textHero =
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro fugiat distinctio incidunt accusantium sunt id nemo odio maiores eius odit!";

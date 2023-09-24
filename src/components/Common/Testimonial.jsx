@@ -6,22 +6,18 @@ import testimonialArrow from "../../assets/img/testimonial-arrow.png";
 
 import StarIcon from "@mui/icons-material/Star";
 import { Rating } from "@mui/material";
+import useData from "../../CustomHooks/useData";
 
 const Testimonial = () => {
   const [feedback, setFeedback] = useState(null);
 
+  const { data, isLoading, error } = useData("users/feedback/");
   useEffect(() => {
-    async function getTestimonials() {
-      const response = await fetch(
-        "http://35.173.181.194:8000/users/feedback/"
-      );
-      const feedback = await response.json();
-      const results = feedback?.results;
-
-      setFeedback(results);
+    if (data) {
+      setFeedback(data.results);
     }
-    getTestimonials();
-  }, []);
+  }, [data]);
+
   return (
     feedback && (
       <div className="flex flex-col mt-5 md:flex-row mx-5 md:mx-10 lg:mx-20 md:my-10 md:mt-32 lg:mt-52">

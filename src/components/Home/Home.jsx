@@ -7,18 +7,17 @@ import HomePackage from "./HomePackage";
 import HomeGallery from "./HomeGallery";
 import Testimonial from "../Common/Testimonial";
 import BestPackage from "../Common/BestPackage";
+import useData from "../../CustomHooks/useData";
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
+
+  const { data, isLoading, error } = useData("home/");
   useEffect(() => {
-    async function getData() {
-      const response = await fetch("http://35.173.181.194:8000/home/");
-      const data = await response.json();
+    if (data) {
       setHomeData(data);
     }
-    getData();
-  }, []);
-  // console.log(homeData?.destination);
+  }, [data]);
   return (
     <>
       <HomeHero />

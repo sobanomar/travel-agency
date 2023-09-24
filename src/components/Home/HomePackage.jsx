@@ -17,6 +17,7 @@ const HomePackage = ({ destinations }) => {
         <h1 className="text-center text-lg my-2 lg:my-4 font-semibold text-purple-600 md:text-left">
           Package
         </h1>
+
         <div className="flex flex-col justify-between md:flex-row ">
           <h1 className="text-2xl text-center  sm:text-3xl md:text-left md:w-[60%] lg:text-4xl lg:w-[60%] xl:text-5xl xl:w-[55%]">
             We Provide A Choice Of Packages Suitable For You
@@ -108,7 +109,7 @@ const HomePackage = ({ destinations }) => {
           </div>
           <div className="w-[50%]">
             <img
-              src={pic2}
+              src={destinations[1].images}
               className="w-[100%] h-[100%] rounded-3xl object-cover md:-rotate-2 img-glow"
             />
           </div>
