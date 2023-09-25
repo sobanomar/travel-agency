@@ -74,43 +74,22 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden absolute w-[100%] z-50">
-          <div className="bg-purple-900 text-white py-4 px-6 space-y-2">
-            <Link
-              to="/"
-              onClick={toggleMenu}
-              className="block hover:text-gray-400"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              onClick={toggleMenu}
-              className="block hover:text-gray-400"
-            >
-              About
-            </Link>
-            <Link
-              to="/destinations"
-              onClick={toggleMenu}
-              className="block hover:text-gray-400"
-            >
-              Destination
-            </Link>
-            <Link
-              to="/gallery"
-              onClick={toggleMenu}
-              className="block hover:text-gray-400"
-            >
-              Our Gallery
-            </Link>
-            <Link
-              to="/contact"
-              onClick={toggleMenu}
-              className="block hover:text-gray-400"
-            >
-              Contact Us
-            </Link>
+        <div className="md:hidden top-20 absolute w-[100%] z-50">
+          <div className="bg-purple-900 bg-opacity-95 mx-2 rounded-2xl text-white py-4 px-6 space-y-2">
+            {menu.map((menuItem) => (
+              <Link
+                key={menuItem.id}
+                to={menuItem.link}
+                onClick={toggleMenu}
+                className={
+                  menuItem.link === "/" + parts[1]
+                    ? "text-purple-500 transition duration-300] block"
+                    : "hover:text-purple-500 transition duration-300 hover:scale-[1.1] block"
+                }
+              >
+                {menuItem.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

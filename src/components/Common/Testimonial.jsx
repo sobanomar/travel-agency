@@ -29,8 +29,8 @@ const Testimonial = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl p-2 text-center md:text-left">
               What do they say about us?
             </h1>
-            <p>"{feedback[0]?.description}"</p>
-            <p>"{feedback[1]?.description}"</p>
+            <p>{feedback[0]?.description}</p>
+            <p>{feedback[1]?.description}</p>
           </div>
           <div className="flex">
             <div style={{ color: "orange" }} className="flex gap-1 mt-0.5 mr-4">
