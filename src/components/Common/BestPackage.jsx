@@ -7,6 +7,7 @@ const BestPackage = () => {
     <div className="my-5 sm:my-10 md:my-28 relative overflow-hidden">
       <div className="absolute h-full">
         <img
+          loading="lazy"
           src={bestPackage}
           className="object-cover h-full w-[100rem] brightness-50 z-0 "
         />

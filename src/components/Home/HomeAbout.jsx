@@ -11,6 +11,7 @@ const HomeAbout = () => {
       <div className="w-[100%] md:w-[50%] md:flex flex-col relative">
         <div className="w-[100%] h-[20rem] md:w-[70%] lg:w-[60%] md:h-[65%]">
           <img
+            loading="lazy"
             src={homeAbout1}
             className="rounded-lg w-[100%] h-full lg:w-[100%] lg:h-[100%] md:w-[100%] md:h-[80%] object-cover img-glow md:-rotate-3"
             alt=""
@@ -18,11 +19,13 @@ const HomeAbout = () => {
         </div>
         <div className="w-[100%] h-[20rem] mt-5  md:w-[65%] md:h-[65%] lg:w-[60%]  lg:h-[65%]  md:absolute md:ml-[20%] lg:ml-[40%] md:mt-[65%] lg:mt-[40%]">
           <img
+            loading="lazy"
             src={homeAbout2}
             className="rounded-lg h-full w-[100%] object-cover lg:w-[100%] lg:h-[100%] md:w-[100%] md:h-[80%] img-glow md:rotate-3"
             alt=""
           />
           <img
+            loading="lazy"
             className="absolute w-[80%] left-[80%] top-[60%] -z-10 hidden"
             src={homeAboutArrow}
             alt=""

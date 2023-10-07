@@ -10,6 +10,7 @@ const HomeWhyChooseUs = () => {
     <>
       <div className=" text-white flex flex-col justify-between sm:justify-around relative h-screen">
         <img
+          loading="lazy"
           className="absolute w-full h-full object-cover -z-10"
           src={whyChooseUsBackground}
         />

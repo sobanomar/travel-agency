@@ -23,17 +23,20 @@ const HomeHero = () => {
           </div>
         </div>
         <img
+          loading="lazy"
           src={mapHero}
           className="absolute w-[80%] sm:w-[40%] top-[20%] sm:top-[5%] left-[5%] sm:left-[25%] "
         />
         <Link to="/destinations">
           <img
+            loading="lazy"
             src={getStartedSvg}
             className="absolute w-[9%] top-[75%] left-[47.5%] z-10 hidden sm:block hover:scale-90 transform transition-transform duration-300"
           />
         </Link>
         <div className="w-[40%] sm:w-[50%] h-[90%] md:h-[120%] overflow-x-hidden flex items-center justify-end sm:justify-center">
           <img
+            loading="lazy"
             className="z-0 mt-32 rounded-r-none rounded-l-xl sm:rounded-xl sm:rotate-3 md:ml-12 md:-mt-16 sm:w-[80%] h-[70%] md:h-[95%] md:w-[100%] object-cover"
             src={homeHero}
           />

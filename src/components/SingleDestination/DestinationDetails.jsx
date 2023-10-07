@@ -2,7 +2,6 @@ import React from "react";
 // import DestinationImage from "../assets/img/destination-detail-1.jpg";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { Rating } from "@mui/material";
-import { Link } from "react-router-dom";
 import CustomButton from "../Common/CustomButton";
 
 const DestinationDetails = ({ destination }) => {
@@ -10,6 +9,7 @@ const DestinationDetails = ({ destination }) => {
     <div className="mx-5 md:mx-10 lg:mx-20 my-10 mt-20">
       <div className="w-full h-[30rem] md:my-10">
         <img
+          loading="lazy"
           className=" w-full h-full object-cover img-glow rounded-3xl md:rotate-2"
           src={destination?.images}
           alt="Destination Image"

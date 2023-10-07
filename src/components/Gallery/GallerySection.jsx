@@ -33,6 +33,7 @@ const GallerySection = () => {
           <div className="flex flex-col space-y-4 w-full lg:w-1/3">
             <div className="relative w-full lg:h-[35%] h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[0].image}
                 alt={Images[0].title}
@@ -43,6 +44,7 @@ const GallerySection = () => {
             </div>
             <div className="relative w-full lg:h-[65%] h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[1].image}
                 alt={Images[1].title}
@@ -56,6 +58,7 @@ const GallerySection = () => {
           <div className="flex flex-col-reverse gap-5 w-full lg:w-1/3">
             <div className="relative w-full lg:h-[35%] h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[2].image}
                 alt={Images[2].title}
@@ -66,6 +69,7 @@ const GallerySection = () => {
             </div>
             <div className="relative w-full lg:h-[65%] h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[3].image}
                 alt={Images[3].title}
@@ -79,6 +83,7 @@ const GallerySection = () => {
           <div className="flex flex-col space-y-4 w-full lg:w-1/3">
             <div className="relative w-full h-[33%] lg:h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[4].image}
                 alt={Images[4].title}
@@ -89,6 +94,7 @@ const GallerySection = () => {
             </div>
             <div className="relative h-[33%] md:h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[5].image}
                 alt={Images[5].title}
@@ -99,6 +105,7 @@ const GallerySection = () => {
             </div>
             <div className="relative h-[33%] md:h-full">
               <img
+                loading="lazy"
                 className="object-cover h-full w-full"
                 src={Images[6].image}
                 alt={Images[6].title}

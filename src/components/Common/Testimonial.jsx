@@ -44,16 +44,19 @@ const Testimonial = () => {
         </div>
         <div className="w-[100%] md:w-[40%] relative">
           <img
+            loading="lazy"
             src={testimonialArrow}
             className="absolute w-[80%] right-[90%] bottom-[87%] lg:bottom-[85%] hidden md:block"
             alt=""
           />
           <img
+            loading="lazy"
             src={feedback[0]?.image}
             className="my-10 md:absolute z-10 w-[100%] md:w-[60%] h-[45%] -top-24 -left-16 rounded-lg md:-rotate-3 object-cover object-left img-glow"
             alt=""
           />
           <img
+            loading="lazy"
             src={testimonialBack}
             className="hidden md:block w-[100%] h-[90%] object-cover rounded-lg md:rotate-3 img-glow"
             alt=""

@@ -17,6 +17,7 @@ const DestinationTourGuides = () => {
       <div className="flex flex-col justify-between my-5 gap-10 md:flex-row">
         <div className="w-full h-[21rem] relative md:-rotate-2 md:h-[22rem] lg:h-[28rem] xl:h-[35rem]">
           <img
+            loading="lazy"
             className="h-full w-full img-glow object-cover rounded-3xl"
             src="https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
           />
@@ -27,6 +28,7 @@ const DestinationTourGuides = () => {
         </div>
         <div className="w-full h-[21rem] relative md:rotate-2 md:h-[22rem]  lg:h-[28rem] xl:h-[35rem]">
           <img
+            loading="lazy"
             className="h-full w-full img-glow object-cover rounded-3xl"
             src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80"
           />

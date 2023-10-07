@@ -29,6 +29,7 @@ const HomePackage = ({ destinations }) => {
           <div className="md:flex-row md:flex hidden">
             <div className="w-full md:w-[50%]">
               <img
+                loading="lazy"
                 src={destinations[0].images}
                 className="w-[100%] h-[100%] rounded-3xl object-cover md:rotate-2 img-glow"
               />
@@ -113,6 +114,7 @@ const HomePackage = ({ destinations }) => {
             </div>
             <div className="w-full md:w-[50%]">
               <img
+                loading="lazy"
                 src={destinations[1].images}
                 className="w-[100%] h-[100%] rounded-3xl object-cover md:-rotate-2 img-glow"
               />

@@ -57,6 +57,7 @@ const RecommendedDestinations = () => {
         <div className="w-[100%] md:w-[50%] flex-col flex items-center">
           <div className="w-[100%] md:w-[80%] lg:w-[60%]">
             <img
+              loading="lazy"
               src={pic2}
               className="h-[20rem] sm:h-[25rem] md:h-[30rem] w-[100%] rounded-3xl object-cover img-glow md:rotate-2"
             />

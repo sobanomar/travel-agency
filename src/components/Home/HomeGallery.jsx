@@ -55,6 +55,7 @@ const GallerySection = () => {
               </div>
               <div className="relative w-full md:h-[65%] h-full">
                 <img
+                  loading="lazy"
                   className="object-cover h-full w-full rounded-lg img-glow"
                   src={Images[3].image}
                   alt={Images[3].title}
