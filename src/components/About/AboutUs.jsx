@@ -1,7 +1,7 @@
 import React from "react";
 
-import homeAbout1 from "../../assets/img/home-about-1.jpg";
-import homeAbout2 from "../../assets/img/home-about-2.jpg";
+import homeAbout1 from "../../assets/img/home-about-1.webp";
+import homeAbout2 from "../../assets/img/home-about-2.webp";
 import homeAboutArrow from "../../assets/img/home-about-arrow.png";
 
 const AboutUs = () => {

@@ -1,8 +1,7 @@
 import React from "react";
 
-import homeHero from "../../assets/img/home-hero.jpg";
+import homeHero from "../../assets/img/home-hero.webp";
 import mapHero from "../../assets/img/home-hero-map.png";
-import getStarted from "../../assets/img/home-hero-get-started.png";
 import getStartedSvg from "../../assets/img/home-get-started.svg";
 import { Link } from "react-router-dom";
 

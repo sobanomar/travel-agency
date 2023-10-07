@@ -1,12 +1,8 @@
 import React from "react";
-import pic1 from "../../assets/img/home-popular-des-1.jpg";
-import pic2 from "../../assets/img/home-popular-des-2.jpg";
-import pic3 from "../../assets/img/home-popular-des-3.jpg";
-import filledStar from "../../assets/img/home-popular-des-filledStar.png";
-import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
+import pic1 from "../../assets/img/home-popular-des-1.webp";
+import pic2 from "../../assets/img/home-popular-des-2.webp";
 
 import StarIcon from "@mui/icons-material/Star";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const RecommendedDestinations = () => {

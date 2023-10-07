@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../Common/Hero.jsx";
 import BestPackage from "../Common/BestPackage.jsx";
-import bookingHeroBg from "../../assets/img/booking-bg-img.jpg";
+import bookingHeroBg from "../../assets/img/booking-bg-img.webp";
 import BookingForm from "./BookingForm.jsx";
 import Testimonial from "../Common/Testimonial.jsx";
 import useData from "../../CustomHooks/useData.js";

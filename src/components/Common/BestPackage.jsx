@@ -1,8 +1,5 @@
 import React from "react";
-import bestPackage from "../../assets/img/best-package.jpg";
-import mapLeft from "../../assets/img/best-package-left.png";
-import mapRight from "../../assets/img/best-package-right.png";
-import { Link } from "react-router-dom";
+import bestPackage from "../../assets/img/best-package.webp";
 import CustomButton from "./CustomButton";
 
 const BestPackage = () => {

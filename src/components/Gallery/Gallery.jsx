@@ -3,7 +3,7 @@ import GallerySection from "./GallerySection";
 import Testimonial from "../Common/Testimonial";
 import BestPackage from "../Common/BestPackage";
 import Hero from "../Common/Hero";
-import galleryBgImg from "../../assets/img/gallery_hero.jpg";
+import galleryBgImg from "../../assets/img/gallery_hero.webp";
 
 const Gallery = () => {
   const description =

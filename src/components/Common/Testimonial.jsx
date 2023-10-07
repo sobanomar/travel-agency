@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import testimonialBack from "../../assets/img/testimonial-back.jpg";
-import testimonialPortrait from "../../assets/img/testimonial-portrait.jpg";
+import testimonialBack from "../../assets/img/testimonial-back.webp";
 import testimonialArrow from "../../assets/img/testimonial-arrow.png";
 
-import StarIcon from "@mui/icons-material/Star";
 import { Rating } from "@mui/material";
 import useData from "../../CustomHooks/useData";
 

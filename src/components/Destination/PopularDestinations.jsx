@@ -1,6 +1,4 @@
 import React from "react";
-import ArrowForward from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
 import DestinationCard from "../Common/DestinationCard";
 const PopularDestinations = ({ destinations }) => {
   return (

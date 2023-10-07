@@ -6,7 +6,7 @@ import DestinationTourGuides from "./DestinationTourGuide";
 import { useParams } from "react-router-dom";
 import BestPackage from "../Common/BestPackage";
 import Testimonial from "../Common/Testimonial";
-import singleDestinationBgImg from "../../assets/img/single_destination_hero.jpg";
+import singleDestinationBgImg from "../../assets/img/single_destination_hero.webp";
 import useData from "../../CustomHooks/useData";
 
 const SingleDestination = () => {

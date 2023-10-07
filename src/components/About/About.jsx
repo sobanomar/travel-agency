@@ -6,7 +6,7 @@ import SuccessStory from "./SuccessStory";
 import Hero from "../Common/Hero";
 import Testimonial from "../Common/Testimonial";
 import BestPackage from "../Common/BestPackage";
-import aboutBgImg from "../../assets/img/about_hero.jpg";
+import aboutBgImg from "../../assets/img/about_hero.webp";
 import useData from "../../CustomHooks/useData";
 
 const About = () => {

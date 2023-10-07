@@ -1,6 +1,6 @@
 import React from "react";
 
-import successAbout from "../../assets/img/success-story-img-about.jpg";
+import successAbout from "../../assets/img/success-story-img-about.webp";
 import arrowLeft from "../../assets/img/success-left-arrow.png";
 import arrowRight from "../../assets/img/success-right-arrow.png";
 

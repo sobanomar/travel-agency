@@ -1,5 +1,4 @@
 import React from "react";
-import welcomeImage from "../../assets/img/welcome-image.jpg";
 import welcomeArrow from "../../assets/img/welcome-arrow.png";
 
 const AboutWelcome = ({ founder }) => {

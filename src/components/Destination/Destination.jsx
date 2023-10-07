@@ -3,7 +3,7 @@ import RecommendedDestinations from "./RecommendedDestinations";
 import Hero from "../Common/Hero";
 import Testimonial from "../Common/Testimonial";
 import PopularDestinations from "./PopularDestinations";
-import destinationBgImg from "../../assets/img/destinations_hero.jpg";
+import destinationBgImg from "../../assets/img/destinations_hero.webp";
 import useData from "../../CustomHooks/useData";
 
 const Destination = () => {

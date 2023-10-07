@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../Common/Hero";
 import ContactForm from "./ContactForm";
 import Info from "./Info";
-import contactBgImg from "../../assets/img/contact_hero.jpg";
+import contactBgImg from "../../assets/img/contact_hero.webp";
 
 const Contact = () => {
   let textHero =

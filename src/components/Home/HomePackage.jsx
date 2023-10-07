@@ -1,11 +1,5 @@
 import React from "react";
-import pic1 from "../../assets/img/home-package-1.jpg";
-import pic2 from "../../assets/img/home-package-2.jpg";
-import filledStar from "../../assets/img/home-popular-des-filledStar.png";
-import hollowStar from "../../assets/img/home-popular-des-hollowStar.png";
 
-import ArrowForward from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
 import { Rating } from "@mui/material";
 import SeeMore from "../Common/SeeMore";
 import CustomButton from "../Common/CustomButton";
